@@ -9,22 +9,22 @@
   padding-right: var(--dl-space-space-oneandhalfunits);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-unit);
-  background-image: url(home-bg-img-1.jpg);
+  background-image: url(../img/home-bg-img-1.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .header-hero {
-  background-image: url(home-bg-img-1.jpg);
+  background-image: url(../img/home-bg-img-1.jpg);
 }
 
 .header-hero-2 {
-  background-image: url(home-bg-img-2.jpg);
+  background-image: url(../img/home-bg-img-2.jpg);
 }
 
 .header-hero-3 {
-  background-image: url(home-bg-img-3.jpg);
+  background-image: url(../img/home-bg-img-3.jpg);
 }
 
 .white-section {
@@ -201,7 +201,6 @@
 .about-us-stats {
   width: 70%;
   display: flex;
-  overflow: hidden;
   max-width: var(--dl-size-size-maxwidth);
   padding-top: var(--dl-space-space-threeunits);
   padding-bottom: var(--dl-space-space-threeunits);
@@ -477,7 +476,7 @@
   justify-content: center;
 }
 .home-container01 {
-  background-image: url(home-bg-img-2.jpg);
+  background-image: url(../img/home-bg-img-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -780,15 +779,9 @@
   height: 670px;
   display: flex;
   align-items: center;
-  border-color: #ffffff;
-  border-width: 1px;
   flex-direction: column;
   justify-content: center;
   background-color: #151515;
-  border-top-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 2px;
 }
 .home-text58 {
   color: #ffffff;
@@ -1754,3 +1747,87 @@
     text-align: center;
   }
 }
+
+.about-company-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-company-container {
+  height: 270px;
+}
+
+.about_company_switchers {
+  bottom: -50px !important;
+}
+
+#AboutCompany {
+  width: 100%;
+}
+
+.section_footer {
+  background-color: #252525;
+  padding: 50px 0 0 0 !important;
+  color: #fff;
+}
+
+.footer_content {
+  width: 60%;
+}
+
+.footer_title {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.footer_title::after {
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 10px;
+  width: 20%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.footer_contacts {
+  display: flex;
+  justify-content:  space-between;
+}
+
+.footer_contacts_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer_contacts_item img {
+  margin-top: 5px;
+}
+
+.footer_contacts_item p {
+  color: #9d9d9d;
+}
+
+.footer_license {
+  text-align: center;
+  color: #424242;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
