@@ -53,11 +53,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="css/home.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 
   </head>
-
-
 
   <body>
     <div>
@@ -70,14 +72,14 @@
             </div>
             <div class="home-items">
               <div class="home-links">
-                <span class="nav-link">Головна</span>
-                <span class="nav-link">Послуги</span>
-                <span class="nav-link">Опис Продукції</span>
-                <span class="nav-link">Переваги</span>
+                <a href="#"><span class="nav-link">Головна</span></a>
+                <a href="#"><span class="nav-link">Послуги</span></a>
+                <a href="#"><span class="nav-link">Опис Продукції</span></a>
+                <a href="#"><span class="nav-link">Переваги</span></a>
               </div>
-              <button class="start-button button home-button">
+              <a href="#" class="start-button button home-button">
                 <span class="home-text04">Контакти</span>
-              </button>
+              </a>
             </div>
             <div data-thq="thq-burger-menu" class="home-burger-menu">
               <button class="home-button1 button">
@@ -93,8 +95,7 @@
               <div
                 data-thq="thq-mobile-menu-nav"
                 data-role="Nav"
-                class="home-nav"
-              >
+                class="home-nav">
                 <div class="home-top">
                   <div class="home-branding1">
                     <img alt="image" src="img/logo.svg" class="home-logo1">
@@ -123,7 +124,17 @@
             </div>
           </header>
         </div>
-        <header class="header-hero">
+
+<div class="carousel-main-page-div">
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+              <header class="header-hero">
           <div class="header-header">
             <h1 class="header-title">
               <span>Т І М Х Л І Б</span>
@@ -152,6 +163,80 @@
             </a>
           </div>
         </header>
+    </div>
+    <div class="carousel-item">
+              <header class="header-hero-2">
+          <div class="header-header">
+            <h1 class="header-title">
+              <span>Т І М Х Л І Б</span>
+              <br>
+            </h1>
+            <h2 class="header-description">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod consectetur tempor incididunt Lorem, ipsum dolor sit amet..
+              </span>
+            </h2>
+            <p class="header-description1 descriotion_text">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
+                sit. Lorem ipsum dolor sit amet.
+              </span>
+            </p>
+            <a
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="header-link"
+            >
+              <span>Почати</span>
+            </a>
+          </div>
+        </header>
+    </div>
+    <div class="carousel-item">
+              <header class="header-hero-3">
+          <div class="header-header">
+            <h1 class="header-title">
+              <span>Т І М Х Л І Б</span>
+              <br>
+            </h1>
+            <h2 class="header-description">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod consectetur tempor incididunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, natus.
+              </span>
+            </h2>
+            <p class="header-description1 descriotion_text">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
+                sit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, temporibus!
+              </span>
+            </p>
+            <a
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="header-link"
+            >
+              <span>Почати</span>
+            </a>
+          </div>
+        </header>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
         <div class="section_wrapper">
           <div class="about-us-content">
             <h1 class="about-us-text title_black"><span>Про Компанiю</span></h1>
@@ -259,6 +344,15 @@
         </div>
         <div class="home-container01 section_wrapper">
           <h1 class="home-text11">Наші Послуги</h1>
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="4000">
           <div class="home-stats">
             <div class="home-stat">
               <svg viewBox="0 0 1152 1024" class="home-icon02">
@@ -326,6 +420,147 @@
               </span>
             </div>
           </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+                <div class="home-stats">
+            <div class="home-stat">
+              <svg viewBox="0 0 1152 1024" class="home-icon02">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+            <div class="home-stat01">
+              <svg viewBox="0 0 1152 1024" class="home-icon05">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text13">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+            <div class="home-stat02">
+              <svg viewBox="0 0 1152 1024" class="home-icon08">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text14">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+            <div class="home-stat03">
+              <svg viewBox="0 0 1152 1024" class="home-icon11">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text15">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+            <div class="home-stat04">
+              <svg viewBox="0 0 1152 1024" class="home-icon14">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text16">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+          </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="4000">
+                <div class="home-stats">
+            <div class="home-stat">
+              <svg viewBox="0 0 1152 1024" class="home-icon02">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+            <div class="home-stat01">
+              <svg viewBox="0 0 1152 1024" class="home-icon05">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text13">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+            <div class="home-stat02">
+              <svg viewBox="0 0 1152 1024" class="home-icon08">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text14">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+            <div class="home-stat03">
+              <svg viewBox="0 0 1152 1024" class="home-icon11">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text15">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+            <div class="home-stat04">
+              <svg viewBox="0 0 1152 1024" class="home-icon14">
+                <path
+                  d="M768 770.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+                ></path>
+                <path
+                  d="M327.196 795.328c55.31-36.15 124.080-63.636 199.788-80.414-15.054-17.784-28.708-37.622-40.492-59.020-30.414-55.234-46.492-116.058-46.492-175.894 0-86.042 0-167.31 30.6-233.762 29.706-64.504 83.128-104.496 159.222-119.488-16.914-76.48-61.94-126.75-181.822-126.75-192 0-192 128.942-192 288 0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h279.006c14.518-12.91 30.596-25.172 48.19-36.672z"
+                ></path>
+              </svg>
+              <span class="home-text16">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </span>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
         </div>
         <div class="home-container02 section_wrapper">
           <h1 class="home-text17 title_black">Наші Переваги</h1>
@@ -596,8 +831,8 @@
       </div>
     </div>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/home.js"></script>
     <script data-section-id="navbar" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
     <script type="text/javascript" src="https://unpkg.com/dangerous-html/dist/default/lib.umd.js"></script>

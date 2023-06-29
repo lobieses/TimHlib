@@ -34,12 +34,39 @@
   --dl-space-space-threeunits: 48px;
   --dl-space-space-oneandhalfunits: 24px;
 }
+
+a {
+  text-decoration: none !important;
+}
+
+.carousel-main-page-div {
+  width: 100%;
+}
+
+.carousel-indicators [data-bs-target] {
+  border: none !important;
+  height: 21px !important;
+  width: 21px !important;
+  background-color: #fff !important;
+}
+
+.carousel-indicators .active {
+  background-color: #a9b63f !important;
+  opacity: 0.7 !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 60px !important;
+  height: 60px !important;
+  color: #a9b63f !important;
+}
+
 .button {
   cursor: pointer;
   transition: 0.3s;
 }
 .button:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .input {
   color: var(--dl-color-gray-black);
@@ -76,13 +103,13 @@
 }
 .nav-link {
   color: #ffffff !important;
-  font-size: 20px;
+  font-size: 20px !important;
   font-style: normal;
   transition: 0.3s;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 .nav-link:hover {
-  opacity: 0.5;
+  color: #a9b63f !important;
 }
 .tag {
   color: #151515;
@@ -130,8 +157,9 @@
   border-radius: 56px;
   padding-right: 18px;
   padding-bottom: 10px;
-  background-color: #235536;
+  background-color: #84b63f;
 }
+
 .service {
   width: 854px;
   cursor: pointer;
