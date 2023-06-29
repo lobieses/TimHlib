@@ -644,6 +644,18 @@
   opacity: 1;
 }
 
+.svg-perevagy-1 {
+  width: 80px;
+  height: 80px;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+
+.svg-perevagy-1:hover {
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
 .home-container02 {
   width: 100%;
   height: 887px;
@@ -655,6 +667,7 @@
   font-style: normal;
   font-family: Pacifico;
   font-weight: 400;
+  margin-bottom: 90px;
 }
 .home-container03 {
   flex: 0 0 auto;
