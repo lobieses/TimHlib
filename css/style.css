@@ -167,7 +167,7 @@ a {
   border-radius: 56px;
   padding-right: 18px;
   padding-bottom: 10px;
-  background-color: #84b63f;
+  background-color: #a9b63f;
 }
 
 .service {
@@ -213,11 +213,11 @@ a {
   font-weight: 600;
 }
 .about_icon_description {
-  font-size: 35px;
+  font-size: 25px;
   margin-top: 15px;
   text-align: center;
   font-family: Rubik;
-  color: #a9b63f;
+  color: #000;
 }
 .about_icon {
   width: 120px;
