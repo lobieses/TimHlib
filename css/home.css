@@ -283,7 +283,7 @@ a {
 }
 
 .nav-link:hover {
-    color: #a9b63f !important;
+    color: #ffb03b !important;
 }
 
 .page-button {
@@ -293,7 +293,7 @@ a {
     padding: 10px 18px;
     border-radius: 56px;
     color: #fff;
-    background-color: #a9b63f;
+    background-color: #ffb03b;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -515,7 +515,7 @@ a {
 .left_separator, .right_separator {
     width: 0;
     height: 1px;
-    background-color: #757575;
+    background-color: #ffb03b;
     transition: width 3s;
     transition-timing-function: ease;
 }
@@ -545,7 +545,7 @@ a {
 }
 
 #products {
-    background-image: url(../img/home-bg-img-2.jpg);
+    background-image: url(../img/home-bg-img-4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -553,7 +553,7 @@ a {
 
 #achievement {
     width: 100%;
-    background-image: url(../img/home-bg-img-3.jpg);
+    background-image: url(../img/home-bg-img-5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -563,7 +563,7 @@ a {
     font-family: Pacifico;
     font-style: normal;
     text-align: center;
-    color: #f4a261;
+    color: #ffb03b;
     text-shadow: 0 -1px 5px rgba(244, 162, 97, 0.6);
     font-size: 70px;
     font-weight: 400;
@@ -592,14 +592,14 @@ a {
 }
 
 .carousel-indicators .active {
-    background-color: #a9b63f !important;
+    background-color: #ffb03b !important;
     opacity: 0.7 !important;
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
     width: 60px !important;
     height: 60px !important;
-    color: #a9b63f !important;
+    color: #ffb03b !important;
 }
 
 
