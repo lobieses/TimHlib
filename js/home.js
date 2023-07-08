@@ -1,22 +1,13 @@
-new Swiper('.sample-slider', {
-    loop: true,
-    autoplay: {
-        delay: 0,
-    },
-    speed: 9000,
-    slidesPerView: 4,
-})
-
-
-new Swiper('.sample-slider-benefits', {
-    loop: true,
-    autoplay: {
-        delay: 0,
-    },
-    speed: 9000,
-    slidesPerView: 3,
-})
-
+const startSwiper = (className, speed, sliderPerBlock) => {
+    new Swiper(className, {
+        loop: true,
+        autoplay: {
+            delay: 0,
+        },
+        speed: speed,
+        slidesPerView: sliderPerBlock,
+    })
+}
 
 const observerNavbarOpacity = () => {
     window.addEventListener('scroll', () => {
@@ -45,6 +36,7 @@ const implementDraggablePointer = () => {
 }
 
 const elemScrolledTrigger = (id, callback) => {
+    console.log('sd')
     const elem = document.getElementById(id);
 
     if (!elem) throw Error("elem haven't found");
@@ -67,30 +59,30 @@ const elemScrolledTrigger = (id, callback) => {
     window.addEventListener('scroll', checkerCallback);
 }
 
-const counter = (elem, duration) => {
-
-    const start = parseInt(elem.textContent, 10);
-    const end = parseInt(elem.dataset.counter, 10);
-
-    if (start === end) return;
-
-    const range = end - start;
-    let curr = start;
-
-    const timeStart = Date.now();
-
-    const loop = () => {
-        let elaps = Date.now() - timeStart;
-        if (elaps > duration) elaps = duration;
-        const frac = elaps / duration;
-        const step = frac * range;
-        curr = start + step;
-        elem.textContent = Math.trunc(curr);
-        if (elaps < duration) requestAnimationFrame(loop);
-    };
-
-    requestAnimationFrame(loop);
-};
+// const counter = (elem, duration) => {
+//
+//     const start = parseInt(elem.textContent, 10);
+//     const end = parseInt(elem.dataset.counter, 10);
+//
+//     if (start === end) return;
+//
+//     const range = end - start;
+//     let curr = start;
+//
+//     const timeStart = Date.now();
+//
+//     const loop = () => {
+//         let elaps = Date.now() - timeStart;
+//         if (elaps > duration) elaps = duration;
+//         const frac = elaps / duration;
+//         const step = frac * range;
+//         curr = start + step;
+//         elem.textContent = Math.trunc(curr);
+//         if (elaps < duration) requestAnimationFrame(loop);
+//     };
+//
+//     requestAnimationFrame(loop);
+// };
 
 const separatorAnimation = (id) => {
     const elem = document.getElementById(id);
@@ -116,19 +108,23 @@ const navbarScroll = () => {
 }
 
 window.addEventListener('load', () => {
+    startSwiper('.about-swiper', 9000, 4);
+    startSwiper('.benefits-swiper', 9000, 3);
+    startSwiper('.achievement-swiper', 9000, 7);
+
     implementDraggablePointer();
 
     observerNavbarOpacity();
 
-    elemScrolledTrigger('achievements', () => {
-        const achievements = Array.from(document.getElementsByClassName('achievement_score'));
-        achievements.forEach((elem) => counter(elem, 1000))
-
-        const underlines = Array.from(document.getElementsByClassName('achievement_underline'));
-        underlines.forEach(underl => {
-            underl.style.width = '100%';
-        })
-    });
+    // elemScrolledTrigger('achievements', () => {
+    //     const achievements = Array.from(document.getElementsByClassName('achievement_score'));
+    //     achievements.forEach((elem) => counter(elem, 1000))
+    //
+    //     const underlines = Array.from(document.getElementsByClassName('achievement_underline'));
+    //     underlines.forEach(underl => {
+    //         underl.style.width = '100%';
+    //     })
+    // });
 
     elemScrolledTrigger('about-us-separator', () => separatorAnimation('about-us-separator'));
     elemScrolledTrigger('benefits-separator', () => separatorAnimation('benefits-separator'));
