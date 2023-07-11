@@ -508,6 +508,7 @@ button {
     width: 100%;
     background-image: url(../img/home-bg-img-5.jpg);
     background-repeat: no-repeat;
+    background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
 }
