@@ -110,7 +110,7 @@ const navbarScroll = () => {
 window.addEventListener('load', () => {
     startSwiper('.about-swiper', 9000, 4);
     startSwiper('.benefits-swiper', 9000, 3);
-    startSwiper('.achievement-swiper', 9000, 7);
+    startSwiper('.clients-swiper', 9000, 7);
 
     implementDraggablePointer();
 
