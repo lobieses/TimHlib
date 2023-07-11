@@ -35,7 +35,7 @@ button {
 .head_separator {
     width: 0;
     height: 2px;
-    background-color: #757575;
+    background-color: #fff;
     transition: width 2s ease;
     margin: 35px auto;
 }
@@ -172,7 +172,7 @@ button {
 }
 
 .about-us-paragraph {
-    color: #c4c4c4;
+    color: #fff;
     font-family: Rubik;
     width: 80%;
     margin: 0 auto;
@@ -265,6 +265,7 @@ button {
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
+    margin-left: 10px;
 }
 
 .home-items {
@@ -341,12 +342,12 @@ button {
     font-family: Rubik;
     font-size: 40px;
     text-align: center;
-    color: #c4c4c4;
+    color: #fff;
 }
 
 .benefit-description {
     font-family: Rubik;
-    color: #818181;
+    color: #fff;
     font-size: 17px;
     margin-top: 10px;
     text-align: center;
@@ -401,7 +402,7 @@ button {
 }
 
 .footer_contacts_item p {
-    color: #9d9d9d;
+    color: #fff;
 }
 
 .footer_license {
@@ -436,7 +437,7 @@ button {
     margin-top: 15px;
     text-align: center;
     font-family: Rubik;
-    color: #c4c4c4;
+    color: #fff;
 }
 
 .inDrag {
@@ -454,7 +455,7 @@ button {
 .left_separator, .right_separator {
     width: 0;
     height: 1px;
-    background-color: #757575;
+    background-color: #fff;
     transition: width 3s;
     transition-timing-function: ease;
 }
