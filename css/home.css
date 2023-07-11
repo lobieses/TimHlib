@@ -294,7 +294,7 @@ button {
 
 .product-separator {
     height: 2px;
-    background: #f4a261;
+    background: #fff;
     width: 0;
     transition: width 0.3s ease;
     margin-top: 30px;
