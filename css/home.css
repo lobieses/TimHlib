@@ -133,6 +133,7 @@ button {
     border-radius: 30px;
     overflow: hidden;
 }
+
 .start_button::before, .start_button::after {
     content: '';
     position: absolute;
@@ -157,6 +158,7 @@ button {
     background: #252525;
     box-shadow: inset 0 0 0 60px #f4a261;
 }
+
 .start_button:hover::before {
     box-shadow: inset 0 0 0 0 #252525;
 }
@@ -555,7 +557,30 @@ button {
     color: #f4a261 !important;
 }
 
+@media (max-width: 1440px) {
 
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 425px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+
+@media (max-width: 320px) {
+
+}
 
 
 
