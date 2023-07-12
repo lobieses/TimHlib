@@ -774,6 +774,11 @@ button {
         padding: 50px 0;
     }
 
+    .separator img {
+        width: 25px;
+        height: 25px;
+    }
+
     .title-black-section, .title-image-section {
         font-size: 50px;
     }
@@ -788,6 +793,10 @@ button {
 
     #mobile-navbar {
         display: block;
+    }
+
+    .about_icon_description {
+        font-size: 15px;
     }
 
     .header-wrapper {
@@ -832,6 +841,16 @@ button {
 
     .benefit-description {
         font-size: 13px;
+        width: 80%;
+    }
+
+    .clients-background {
+        height: 150px;
+    }
+
+    .clients-img {
+        width: 150px;
+        height: 150px;
     }
 
     .footer_contacts_item p {
@@ -842,21 +861,118 @@ button {
         width: 95%;
     }
 
+    .footer_contacts_item {
+        margin-left: 30px;
+    }
+
+    .footer_title::after {
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .about_icon_description {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 425px) {
+    .separator img {
+        width: 20px;
+        height: 20px;
+    }
 
+    .header-title {
+        font-size: 45px;
+    }
+
+    .description_text {
+        width: 100%;
+    }
+
+    .header-description, .description_text {
+        font-size: 14px;
+    }
+
+    .separator {
+        margin: 15px 0;
+    }
+
+    .section_wrapper {
+        padding: 40px 0;
+    }
+
+    .about_us_icon, .benefit-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .about_icon_description {
+        font-size: 17px;
+    }
+
+    .title-black-section, .title-image-section {
+        font-size: 40px;
+    }
+
+    .benefit-title {
+        font-size: 20px;
+    }
+
+    .benefit-description {
+        margin-top: 0;
+    }
+
+    .benefit-description {
+        font-size: 10px;
+    }
+
+    .clients-background {
+        height: 100px;
+    }
+
+    .clients-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer_contacts_item {
+        margin-left: 15px;
+    }
+
+    .footer_contacts_item {
+        width: 180px;
+    }
 }
 
 @media (max-width: 375px) {
+    .header-title {
+        font-size: 40px;
+    }
 
+    .about_icon_description {
+        width: 80%;
+    }
+
+    .footer_title::after {
+        width: 70%;
+    }
+
+    .footer_contacts {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .footer_contacts_item:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .footer_license {
+        font-size: 10px;
+    }
 }
-
-
-@media (max-width: 320px) {
-
-}
-
 
 
 

@@ -98,11 +98,17 @@ const defineWindowsPositionAsNumber = () => {
         case (width <= 1024 && width >= 768): {
             return 2
         }
-        case (width <= 768 && width >= 425): {
+        case (width <= 768 && width >= 550): {
             return 3
         }
+        case (width <= 550 && width >= 425): {
+            return 4
+        }
+        case (width <= 425 && width >= 375): {
+            return 5
+        }
         default: {
-            return 0
+            return 6
         }
     }
 }
@@ -112,19 +118,28 @@ const swiperOffsetsList = {
         0: 4,
         1: 3,
         2: 3,
-        3: 2
+        3: 3,
+        4: 2,
+        5: 3,
+        6: 2
     },
     benefits: {
         0: 3,
         1: 3,
         2: 2,
-        3: 2
+        3: 2,
+        4: 2,
+        5: 2,
+        6: 2
     },
     clients: {
         0: 7,
         1: 4,
         2: 3,
-        3: 2
+        3: 3,
+        4: 2,
+        5: 3,
+        6: 2
     }
 }
 
