@@ -21,8 +21,12 @@
 </head>
 <body>
 <div>
+    <div id="mobile-blackout"></div>
     <div class="header-container">
         <div class="home-navbar">
+            <div id="mobile-navbar">
+
+            </div>
             <header class="home-navbar-interactive">
                 <div class="home-branding">
                     <img alt="image" src="img/logo.svg" class="home-logo">
@@ -30,11 +34,11 @@
                 </div>
                 <div class="home-items">
                     <div class="home-links" id="navbar">
-                        <div data-href="head" class="nav-link">Головна</div>
-                        <div data-href="about-us" class="nav-link">Про нас</div>
-                        <div data-href="products" class="nav-link">Продукти</div>
-                        <div data-href="benefits" class="nav-link">Переваги</div>
-                        <div data-href="clients" class="nav-link">Клієнти</div>
+                        <div data-href="head" class="navbar-link">Головна</div>
+                        <div data-href="about-us" class="navbar-link">Про нас</div>
+                        <div data-href="products" class="navbar-link">Продукти</div>
+                        <div data-href="benefits" class="navbar-link">Переваги</div>
+                        <div data-href="clients" class="navbar-link">Клієнти</div>
                     </div>
                     <a href="#" class="page-button">
                         <span>Каталог</span>
@@ -42,6 +46,9 @@
                     <a href="#" class="page-button">
                         <span>Новини</span>
                     </a>
+                </div>
+                <div id="mobile-burger">
+                    <span></span>
                 </div>
             </header>
         </div>
@@ -129,16 +136,6 @@
                         </header>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
         <div class="section_wrapper white-section" id="about-us">
@@ -256,7 +253,7 @@
         </div>
         <div class="section_wrapper white-section" id="benefits">
             <h1 class="title-black-section">Наші Переваги</h1>
-            <div class="separator" style="width: 60%" id="benefits-separator">
+            <div class="separator" id="benefits-separator">
                 <div class="left_separator"></div>
                 <img src="./img/separator_icon.svg" alt="wheat">
                 <div class="right_separator"></div>

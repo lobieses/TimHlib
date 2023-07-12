@@ -14,8 +14,7 @@ button {
     position: relative;
     align-items: center;
     flex-direction: column;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 
 .header-hero, .header-hero-2, .header-hero-3 {
@@ -62,6 +61,7 @@ button {
     align-items: flex-start;
     flex-direction: column;
     margin-top: 100px;
+    width: 80%;
 }
 
 .header-title {
@@ -208,18 +208,17 @@ button {
 .home-navbar-interactive {
     width: 100%;
     display: flex;
-    max-width: 1280px;
     align-items: center;
     padding: 32px 24px;
     justify-content: space-between;
 }
 
-.nav-link {
-    color: #ffffff !important;
-    font-size: 20px !important;
+.navbar-link {
+    color: #ffffff;
+    font-size: 20px;
     font-style: normal;
     transition: 0.3s;
-    font-weight: 500 !important;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -277,6 +276,82 @@ button {
     gap: 30px;
 }
 
+#mobile-burger {
+    position: relative;
+    transition: 0.3s all;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}
+
+#mobile-burger::after, #mobile-burger::before {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transition: 0.3s all;
+}
+
+#mobile-burger::before {
+    top: calc(100% - 2px);
+}
+
+#mobile-burger span {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: calc(50% - 1px);
+    transition: inherit;
+}
+
+#mobile-burger.active span {
+    transform: scale(0);
+}
+
+#mobile-burger.active::before {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+#mobile-burger.active::after {
+    transform: rotate(-45deg);
+    bottom: calc(50% - 2px);
+}
+
+#mobile-navbar {
+    position: fixed;
+    height: 100vh;
+    width: 70%;
+    background: #484848;
+    right: calc(-70%);
+    z-index: 998;
+    transition: right 0.3s ease;
+    display: none;
+}
+
+#mobile-navbar.active {
+    right: 0;
+}
+
+#mobile-blackout {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    opacity: 0.7;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+#mobile-blackout.active {
+    background: #000;
+    z-index: 10;
+}
+
 .home-links {
     display: flex;
     align-items: center;
@@ -315,7 +390,7 @@ button {
     font-size: 40px;
     text-align: center;
     margin-top: 20px;
-    font-family: sans-serif Rubik;
+    font-family: Rubik;
     transition: 0.3s all;
 }
 
@@ -348,6 +423,10 @@ button {
     align-items: center;
 }
 
+#benefits-separator {
+    width: 60%;
+}
+
 .benefit-img {
     width: 80px;
     height: 80px;
@@ -378,7 +457,7 @@ button {
 }
 
 .footer_content {
-    width: 60%;
+    width: 65%;
 }
 
 .footer_title {
@@ -402,8 +481,9 @@ button {
 }
 
 .footer_contacts {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: start;
 }
 
 .footer_contacts_item {
@@ -422,7 +502,7 @@ button {
 
 .footer_license {
     text-align: center;
-    color: #424242;
+    color: #c5c5c5;
     padding: 15px;
 }
 
@@ -558,14 +638,209 @@ button {
 }
 
 @media (max-width: 1440px) {
+    .home-navbar-interactive {
+        padding: 25px 16px;
+    }
 
+    .navbar-link {
+        font-size: 15px;
+    }
+
+    .page-button {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+
+    .header-title {
+        font-size: 110px;
+    }
+
+    .about-swiper {
+        width: 90%;
+    }
+
+    .about-us-paragraph {
+        width: 100%;
+    }
+
+    .products-wrapper {
+        gap: 70px;
+    }
+
+    .product-image {
+        width: 170px;
+        height: 170px;
+    }
+
+    .benefit-wrapper {
+        width: 90%;
+    }
+
+    .footer_content {
+        width: 90%;
+    }
+
+    .footer_contacts_item p {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 1024px) {
+    .home-items {
+        gap: 15px;
+    }
 
+    .home-links {
+        gap: 15px;
+    }
+
+    .navbar-link {
+        font-size: 13px;
+    }
+
+    .header-title {
+        font-size: 88px;
+    }
+
+    .header-description, .description_text {
+        font-size: 20px;
+    }
+
+    .about-us-paragraph {
+        font-size: 17px;
+    }
+
+    .about_us_icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .section_wrapper {
+        padding: 70px 0;
+    }
+
+    .about_icon_description {
+        font-size: 21px;
+    }
+
+    .product-image {
+        width: 130px;
+        height: 130px;
+    }
+
+    .products-wrapper {
+        gap: 0;
+    }
+
+    .product {
+        width: 250px;
+    }
+
+    .product_description {
+        font-size: 30px;
+    }
+
+    #benefits-separator {
+        width: 80%;
+    }
+
+    .footer_contacts_item {
+        width: 200px;
+    }
+
+    .footer_contacts {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .footer_contacts_item:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .footer_contacts_item p {
+        font-size: 16px;
+    }
+
+    .footer_license {
+        padding: 0 15px 15px 15px;
+    }
 }
 
 @media (max-width: 768px) {
+    .section_wrapper {
+        padding: 50px 0;
+    }
+
+    .title-black-section, .title-image-section {
+        font-size: 50px;
+    }
+
+    #mobile-burger {
+        display: block;
+    }
+
+    .home-items {
+        display: none;
+    }
+
+    #mobile-navbar {
+        display: block;
+    }
+
+    .header-wrapper {
+        width: 90%;
+    }
+
+    .header-title {
+        font-size: 55px;
+    }
+
+    .head_separator {
+        margin: 0 auto;
+    }
+
+    .header-description, .description_text {
+        font-size: 15px;
+    }
+
+    .about-us-content {
+        width: 90%;
+    }
+
+    .about-us-paragraph {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .about_us_icon, .benefit-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .products-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .benefit-title {
+        font-size: 25px;
+    }
+
+    .benefit-description {
+        font-size: 13px;
+    }
+
+    .footer_contacts_item p {
+        font-size: 13px;
+    }
+
+    .footer_content {
+        width: 95%;
+    }
 
 }
 

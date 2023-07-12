@@ -1,3 +1,11 @@
+const toggleClassname = (elem, classname) => {
+    if (elem.className.split(' ').some(classn => classn === classname)) {
+        elem.className = elem.className.split(' ').filter(classn => classn !== classname).join(' ')
+    } else {
+        elem.className = `${elem.className} ${classname}`
+    }
+}
+
 const startSwiper = (className, speed, sliderPerBlock) => {
     new Swiper(className, {
         loop: true,
@@ -36,7 +44,6 @@ const implementDraggablePointer = () => {
 }
 
 const elemScrolledTrigger = (id, callback) => {
-    console.log('sd')
     const elem = document.getElementById(id);
 
     if (!elem) throw Error("elem haven't found");
@@ -58,31 +65,6 @@ const elemScrolledTrigger = (id, callback) => {
 
     window.addEventListener('scroll', checkerCallback);
 }
-
-// const counter = (elem, duration) => {
-//
-//     const start = parseInt(elem.textContent, 10);
-//     const end = parseInt(elem.dataset.counter, 10);
-//
-//     if (start === end) return;
-//
-//     const range = end - start;
-//     let curr = start;
-//
-//     const timeStart = Date.now();
-//
-//     const loop = () => {
-//         let elaps = Date.now() - timeStart;
-//         if (elaps > duration) elaps = duration;
-//         const frac = elaps / duration;
-//         const step = frac * range;
-//         curr = start + step;
-//         elem.textContent = Math.trunc(curr);
-//         if (elaps < duration) requestAnimationFrame(loop);
-//     };
-//
-//     requestAnimationFrame(loop);
-// };
 
 const separatorAnimation = (id) => {
     const elem = document.getElementById(id);
@@ -107,29 +89,73 @@ const navbarScroll = () => {
     })
 }
 
+const defineWindowsPositionAsNumber = () => {
+    const width = window.innerWidth;
+    switch (true) {
+        case (width <= 1440 && width >= 1024): {
+            return 1
+        }
+        case (width <= 1024 && width >= 768): {
+            return 2
+        }
+        case (width <= 768 && width >= 425): {
+            return 3
+        }
+        default: {
+            return 0
+        }
+    }
+}
+
+const swiperOffsetsList = {
+    about: {
+        0: 4,
+        1: 3,
+        2: 3,
+        3: 2
+    },
+    benefits: {
+        0: 3,
+        1: 3,
+        2: 2,
+        3: 2
+    },
+    clients: {
+        0: 7,
+        1: 4,
+        2: 3,
+        3: 2
+    }
+}
+
+const mobileBurgerToggling = () => {
+    const burger = document.getElementById('mobile-burger');
+    const navbar = document.getElementById('mobile-navbar');
+    const blackout = document.getElementById('mobile-blackout');
+
+    burger.addEventListener('click', () => {
+        toggleClassname(burger, 'active');
+        toggleClassname(navbar, 'active');
+        toggleClassname(blackout, 'active')
+    });
+}
+
 window.addEventListener('load', () => {
-    startSwiper('.about-swiper', 9000, 4);
-    startSwiper('.benefits-swiper', 9000, 3);
-    startSwiper('.clients-swiper', 9000, 7);
+    const windowsPositionAsNumber = defineWindowsPositionAsNumber()
+    startSwiper('.about-swiper', 9000, swiperOffsetsList.about[windowsPositionAsNumber]);
+    startSwiper('.benefits-swiper', 9000, swiperOffsetsList.benefits[windowsPositionAsNumber]);
+    startSwiper('.clients-swiper', 9000, swiperOffsetsList.clients[windowsPositionAsNumber]);
 
     implementDraggablePointer();
 
     observerNavbarOpacity();
 
-    // elemScrolledTrigger('achievements', () => {
-    //     const achievements = Array.from(document.getElementsByClassName('achievement_score'));
-    //     achievements.forEach((elem) => counter(elem, 1000))
-    //
-    //     const underlines = Array.from(document.getElementsByClassName('achievement_underline'));
-    //     underlines.forEach(underl => {
-    //         underl.style.width = '100%';
-    //     })
-    // });
-
     elemScrolledTrigger('about-us-separator', () => separatorAnimation('about-us-separator'));
     elemScrolledTrigger('benefits-separator', () => separatorAnimation('benefits-separator'));
 
     navbarScroll();
+
+    mobileBurgerToggling();
 
     const separator = document.getElementById('head_separator');
     separator.style.width = '100%';
