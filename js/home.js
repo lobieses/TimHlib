@@ -6,6 +6,16 @@ const toggleClassname = (elem, classname) => {
     }
 }
 
+const deleteClassname = (elem, classname) => {
+    elem.className = elem.className.split(' ').filter(classn => classn !== classname).join(' ')
+}
+
+const addClassname = (elem, classname) => {
+    if (!elem.className.split(' ').some(classn => classn === classname)) {
+        elem.className = `${elem.className} ${classname}`
+    }
+}
+
 const startSwiper = (className, speed, sliderPerBlock) => {
     new Swiper(className, {
         loop: true,
@@ -37,7 +47,7 @@ const implementDraggablePointer = () => {
         })
 
         elem.addEventListener('transitionstart', (e) => {
-            e.target.className = e.target.className.replace(/^(.+) inDrag$/, '$1');
+            deleteClassname(e.target, 'inDrag')
         })
 
     })
@@ -75,15 +85,25 @@ const separatorAnimation = (id) => {
     rightSide.style.width = '100%';
 }
 
-const navbarScroll = () => {
-    const navbar = document.getElementById('navbar')
-
-    navbar.addEventListener('click', (e) => {
+const navbarScroll = (elem) => {
+    elem.addEventListener('click', (e) => {
         const path = e.target.dataset.href;
         const section = document.getElementById(path);
+        let navbarHeight
+
+
+        switch (defineWindowsPositionAsNumber()) {
+            case 1: {
+                navbarHeight = 114
+                break
+            }
+            default: {
+                navbarHeight = 100
+            }
+        }
 
         if (section && path) window.scrollTo({
-            top: +section.offsetTop - 114,
+            top: +section.offsetTop - navbarHeight,
             behavior: "smooth",
         });
     })
@@ -143,16 +163,38 @@ const swiperOffsetsList = {
     }
 }
 
-const mobileBurgerToggling = () => {
+const manageNavbarStatus = (activate, elems) => {
+    elems.forEach(elem => {
+        if(activate) {
+            addClassname(elem, 'active');
+        } else {
+            deleteClassname(elem, 'active');
+        }
+    })
+}
+
+const mobileNavbarToggling = () => {
     const burger = document.getElementById('mobile-burger');
     const navbar = document.getElementById('mobile-navbar');
     const blackout = document.getElementById('mobile-blackout');
 
+    const navbarElems = [burger, navbar, blackout]
+
     burger.addEventListener('click', () => {
-        toggleClassname(burger, 'active');
-        toggleClassname(navbar, 'active');
-        toggleClassname(blackout, 'active')
+        manageNavbarStatus(true, navbarElems);
     });
+
+    blackout.addEventListener('click', () => {
+        if (burger.className.split(' ').some(classn => classn === 'active')) {
+            manageNavbarStatus(false, navbarElems);
+        }
+    })
+
+    navbar.addEventListener('click', (e) => {
+        if(e.target.className.split(' ').some(classn => classn === 'navbar-link')) {
+            manageNavbarStatus(false, navbarElems);
+        }
+    })
 }
 
 window.addEventListener('load', () => {
@@ -168,9 +210,10 @@ window.addEventListener('load', () => {
     elemScrolledTrigger('about-us-separator', () => separatorAnimation('about-us-separator'));
     elemScrolledTrigger('benefits-separator', () => separatorAnimation('benefits-separator'));
 
-    navbarScroll();
+    navbarScroll(document.getElementById('navbar'));
+    navbarScroll(document.getElementById('mobile-navbar'));
 
-    mobileBurgerToggling();
+    mobileNavbarToggling();
 
     const separator = document.getElementById('head_separator');
     separator.style.width = '100%';

@@ -325,11 +325,13 @@ button {
 #mobile-navbar {
     position: fixed;
     height: 100vh;
-    width: 70%;
-    background: #484848;
-    right: calc(-70%);
+    width: 60%;
+    background: #252525;
+    right: calc(-60%);
     z-index: 998;
     transition: right 0.3s ease;
+    padding-top: 100px;
+    padding-left: 30px;
     display: none;
 }
 
@@ -792,7 +794,9 @@ button {
     }
 
     #mobile-navbar {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 
     .about_icon_description {
