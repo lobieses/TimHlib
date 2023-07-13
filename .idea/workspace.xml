@@ -8,14 +8,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9457dc7e-8f1b-4272-94c1-85b7838199f6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hleb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hleb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/swiper/swiper.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/swiper/swiper.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/animate/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/animate/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/easing/easing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/easing/easing.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/css/lightbox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/js/lightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/js/lightbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lightbox/links.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/assets/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/assets/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/assets/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/assets/owl.theme.default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/assets/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/assets/owl.theme.green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/assets/owl.theme.green.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/assets/owl.video.play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/owl.carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/owlcarousel/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/waypoints/links.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/waypoints/waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/wow/wow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/wow/wow.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +134,7 @@
       <workItem from="1689099796284" duration="8900000" />
       <workItem from="1689156499973" duration="15352000" />
       <workItem from="1689188177545" duration="8471000" />
-      <workItem from="1689249927281" duration="14283000" />
+      <workItem from="1689249927281" duration="15648000" />
     </task>
     <servers />
   </component>
