@@ -1,17 +1,11 @@
-const toggleClassname = (elem, classname) => {
-    if (elem.className.split(' ').some(classn => classn === classname)) {
-        elem.className = elem.className.split(' ').filter(classn => classn !== classname).join(' ')
-    } else {
-        elem.className = `${elem.className} ${classname}`
-    }
-}
+const haveClass = (elem, classn) => elem.className.split(' ').some(existsClassn => existsClassn === classn);
 
 const deleteClassname = (elem, classname) => {
     elem.className = elem.className.split(' ').filter(classn => classn !== classname).join(' ')
 }
 
 const addClassname = (elem, classname) => {
-    if (!elem.className.split(' ').some(classn => classn === classname)) {
+    if (!haveClass(elem, classname)) {
         elem.className = `${elem.className} ${classname}`
     }
 }
@@ -165,7 +159,7 @@ const swiperOffsetsList = {
 
 const manageNavbarStatus = (activate, elems) => {
     elems.forEach(elem => {
-        if(activate) {
+        if (activate) {
             addClassname(elem, 'active');
         } else {
             deleteClassname(elem, 'active');
@@ -181,20 +175,28 @@ const mobileNavbarToggling = () => {
     const navbarElems = [burger, navbar, blackout]
 
     burger.addEventListener('click', () => {
-        manageNavbarStatus(true, navbarElems);
+        manageNavbarStatus(!haveClass(burger, 'active'), navbarElems);
     });
 
     blackout.addEventListener('click', () => {
-        if (burger.className.split(' ').some(classn => classn === 'active')) {
+        if (haveClass(burger, 'active')) {
             manageNavbarStatus(false, navbarElems);
         }
     })
 
     navbar.addEventListener('click', (e) => {
-        if(e.target.className.split(' ').some(classn => classn === 'navbar-link')) {
+        if (haveClass(e.target, 'mobile-navbar-link')) {
             manageNavbarStatus(false, navbarElems);
         }
     })
+}
+
+const loopHeaderCarousel = () => {
+    const nextButton = document.getElementById('header-next-button');
+
+    setInterval(() => {
+        nextButton.click();
+    }, 10000)
 }
 
 window.addEventListener('load', () => {
@@ -206,6 +208,8 @@ window.addEventListener('load', () => {
     implementDraggablePointer();
 
     observerNavbarOpacity();
+
+    loopHeaderCarousel();
 
     elemScrolledTrigger('about-us-separator', () => separatorAnimation('about-us-separator'));
     elemScrolledTrigger('benefits-separator', () => separatorAnimation('benefits-separator'));

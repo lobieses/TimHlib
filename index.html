@@ -14,9 +14,7 @@
             href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap"
             data-tag="font">
     <link href="css/home.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 </head>
 <body>
@@ -25,11 +23,13 @@
     <div class="header-container">
         <div class="home-navbar">
             <div id="mobile-navbar">
-                <div data-href="head" class="navbar-link">Головна</div>
-                <div data-href="about-us" class="navbar-link">Про нас</div>
-                <div data-href="products" class="navbar-link">Продукти</div>
-                <div data-href="benefits" class="navbar-link">Переваги</div>
-                <div data-href="clients" class="navbar-link">Клієнти</div>
+                <div data-href="head" class="mobile-navbar-link">Головна</div>
+                <div data-href="about-us" class="mobile-navbar-link">Про нас</div>
+                <div data-href="products" class="mobile-navbar-link">Продукти</div>
+                <div data-href="benefits" class="mobile-navbar-link">Переваги</div>
+                <div data-href="clients" class="mobile-navbar-link">Клієнти</div>
+                <div href="#" class="mobile-page-button">Каталог</div>
+                <div href="#" class="mobile-page-button">Новини</div>
             </div>
             <header class="home-navbar-interactive">
                 <div class="home-branding">
@@ -44,12 +44,8 @@
                         <div data-href="benefits" class="navbar-link">Переваги</div>
                         <div data-href="clients" class="navbar-link">Клієнти</div>
                     </div>
-                    <a href="#" class="page-button">
-                        <span>Каталог</span>
-                    </a>
-                    <a href="#" class="page-button">
-                        <span>Новини</span>
-                    </a>
+                    <a href="#" class="page-button">Каталог</a>
+                    <a href="#" class="page-button">Новини</a>
                 </div>
                 <div id="mobile-burger">
                     <span></span>
@@ -77,7 +73,20 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                     eiusmod consectetur tempor incididunt.
                                 </h2>
-                                <div class="head_separator" id="head_separator"></div>
+                                <div class="head_separator" id="head_separator">
+                                    <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" id="header-next-button" type="button"
+                                            data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
                                 <p class="description_text">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                     eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
@@ -101,7 +110,20 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                     eiusmod consectetur tempor incididunt Lorem, ipsum dolor sit amet..
                                 </h2>
-                                <div class="head_separator" style="width: 100% !important;"></div>
+                                <div class="head_separator" style="width: 100% !important;">
+                                    <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
                                 <p class="description_text">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                     eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
@@ -125,7 +147,20 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                     eiusmod consectetur tempor incididunt. Lorem ipsum dolor sit amet consectetur.
                                 </h2>
-                                <div class="head_separator" style="width: 100% !important;"></div>
+                                <div class="head_separator" style="width: 100% !important;">
+                                    <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
                                 <p class="description_text">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                     eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
