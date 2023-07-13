@@ -106,6 +106,9 @@ const navbarScroll = (elem) => {
 const defineWindowsPositionAsNumber = () => {
     const width = window.innerWidth;
     switch (true) {
+        case (width > 1440): {
+            return 0
+        }
         case (width <= 1440 && width >= 1024): {
             return 1
         }
@@ -193,14 +196,30 @@ const mobileNavbarToggling = () => {
 
 const loopHeaderCarousel = () => {
     const nextButton = document.getElementById('header-next-button');
+    const carousel = document.getElementById('carouselExampleIndicators');
+    const switchClasses = ['carousel-control-next-icon', 'carousel-control-prev-icon', 'carousel-indicator'];
 
-    setInterval(() => {
+    const callback = (e) => {
+        if(switchClasses.some(classn => haveClass(e.target, classn))) {
+            clearInterval(loopInterval);
+            carousel.removeEventListener('click', callback);
+        }
+    }
+
+    const loopInterval = setInterval(() => {
+        carousel.removeEventListener('click', callback);
         nextButton.click();
-    }, 10000)
+        carousel.addEventListener('click', callback);
+    }, 5000)
+
+    carousel.addEventListener('click', callback)
+
+
 }
 
 window.addEventListener('load', () => {
     const windowsPositionAsNumber = defineWindowsPositionAsNumber()
+    console.log(windowsPositionAsNumber)
     startSwiper('.about-swiper', 9000, swiperOffsetsList.about[windowsPositionAsNumber]);
     startSwiper('.benefits-swiper', 9000, swiperOffsetsList.benefits[windowsPositionAsNumber]);
     startSwiper('.clients-swiper', 9000, swiperOffsetsList.clients[windowsPositionAsNumber]);
