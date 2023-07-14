@@ -28,6 +28,7 @@ button {
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .header-hero {
@@ -80,6 +81,7 @@ button {
     flex-direction: column;
     margin-top: 200px;
     width: 80%;
+    z-index: 2;
 }
 
 .header-title {
@@ -537,9 +539,9 @@ button {
     font-size: 25px;
     font-weight: 500;
     text-align: left;
-    margin: 0;
     position: relative;
     padding-bottom: 20px;
+    margin-bottom: 30px;
     color: #3b3b3b;
 }
 
@@ -563,6 +565,7 @@ button {
     display: flex;
     align-items: flex-start;
     gap: 10px;
+    width: 210px;
 }
 
 .footer_contacts_item img {
@@ -852,10 +855,6 @@ button {
 }
 
 @media (max-width: 768px) {
-    .carousel-main-page-div {
-        height: 800px !important;
-    }
-
     .section_wrapper {
         padding: 50px 0;
     }
@@ -962,6 +961,18 @@ button {
 }
 
 @media (max-width: 550px) {
+    .footer_title {
+        text-align: center;
+    }
+
+    .footer_title::after {
+        right: calc(50% - 15%);
+    }
+
+    .header-hero, .header-hero-2, .header-hero-3, #products, #clients {
+        background-attachment: scroll;
+    }
+
     .about_icon_description {
         font-size: 17px;
     }
@@ -1075,18 +1086,19 @@ button {
         width: 80%;
     }
 
-    .footer_title::after {
-        width: 70%;
+    .footer_contacts_item img {
+        width: 10px !important  ;
+        height: 10px !important;
     }
 
-    .footer_contacts {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+
+    .footer_contacts_item {
+        width: 150px;
+        margin-left: 5px;
     }
 
-    .footer_contacts_item:nth-child(5) {
-        grid-column-start: 1;
-        grid-column-end: 1;
+    .footer_contacts_item p {
+        font-size: 12px;
     }
 
     .footer_license {
