@@ -7,7 +7,11 @@
     <option name="rewriteBookmarkType" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9457dc7e-8f1b-4272-94c1-85b7838199f6" name="Changes" comment="" />
+    <list default="true" id="9457dc7e-8f1b-4272-94c1-85b7838199f6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bootstrap/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bootstrap/bootstrap.min.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +35,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/1.Full-Stack/1.AltRecipe/Wagmi/volume-simulator",
+    "last_opened_file_path": "C:/Users/lobie/Downloads/genymotion-idea-plugin-1.1.0.zip",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -40,7 +44,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "settings.editor.selected.configurable": "preferences.externalTools",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external"
   }
 }]]></component>
@@ -98,7 +102,9 @@
       <workItem from="1689099796284" duration="8900000" />
       <workItem from="1689156499973" duration="15352000" />
       <workItem from="1689188177545" duration="8471000" />
-      <workItem from="1689249927281" duration="21902000" />
+      <workItem from="1689249927281" duration="22835000" />
+      <workItem from="1689285976723" duration="2254000" />
+      <workItem from="1689327690059" duration="5554000" />
     </task>
     <servers />
   </component>
