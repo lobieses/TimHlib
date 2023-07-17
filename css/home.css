@@ -313,7 +313,7 @@ button {
     transition: 0.3s;
 }
 
-.home-logo:hover {
+.home-branding:hover .home-logo {
     transform: rotate(360deg);
 }
 
@@ -983,6 +983,10 @@ button {
 
     .about_icon_description {
         font-size: 17px;
+    }
+
+    #products {
+        background-position: 25% 70%;
     }
 
     .header-wrapper {
