@@ -347,7 +347,7 @@ button {
 
 #mobile-burger::after, #mobile-burger::before {
     content: '';
-    background-color: #ffffff;
+    background-color: #3b3b3b;
     position: absolute;
     width: 100%;
     height: 2px;
@@ -359,7 +359,7 @@ button {
 }
 
 #mobile-burger span {
-    background-color: #fff;
+    background-color: #3b3b3b;
     position: absolute;
     width: 100%;
     height: 2px;
