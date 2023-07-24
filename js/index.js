@@ -200,7 +200,7 @@ const loopHeaderCarousel = () => {
     const switchClasses = ['carousel-control-next-icon', 'carousel-control-prev-icon', 'carousel-indicator'];
 
     const callback = (e) => {
-        if (switchClasses.some(classn => haveClass(e.target, classn))) {
+        if(switchClasses.some(classn => haveClass(e.target, classn))) {
             clearInterval(loopInterval);
             carousel.removeEventListener('click', callback);
         }
@@ -235,8 +235,6 @@ window.addEventListener('load', () => {
     navbarScroll(document.getElementById('navbar'));
     navbarScroll(document.getElementById('mobile-navbar'));
     navbarScroll(document.getElementById('logo'));
-
-    Array.from(document.getElementsByClassName('start_button')).forEach((elem) => navbarScroll(elem))
 
     mobileNavbarToggling();
 

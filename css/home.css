@@ -391,9 +391,10 @@ button {
     gap: 40px;
     right: calc(-60%);
     z-index: 998;
-    background: #252525;
+    background: #efefef;
     transition: right 0.3s ease;
     padding: 80px 0 0 80px;
+    border-left: solid 1px #3b3b3b;
 
 }
 
@@ -403,13 +404,13 @@ button {
 
 .mobile-navbar-link {
     width: 100%;
-    color: #ffffff;
+    color: #3b3b3b;
     font-size: 20px;
     font-style: normal;
     transition: 0.3s;
     font-weight: 500;
     cursor: pointer;
-    text-shadow: 0 -1px 2px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 -1px 2px rgba(155, 155, 155, 0.6);
     margin-left: 18px;
 }
 
@@ -568,7 +569,7 @@ button {
 
 .footer_contacts {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     align-items: start;
 }
 
@@ -846,10 +847,9 @@ button {
 
     .footer_contacts {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         justify-items: center;
         align-items: center;
-        margin-bottom: 20px;
     }
 
     .footer_contacts_item:nth-child(5) {
