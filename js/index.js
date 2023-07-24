@@ -219,7 +219,6 @@ const loopHeaderCarousel = () => {
 
 window.addEventListener('load', () => {
     const windowsPositionAsNumber = defineWindowsPositionAsNumber()
-    console.log(windowsPositionAsNumber)
     startSwiper('.about-swiper', 9000, swiperOffsetsList.about[windowsPositionAsNumber]);
     startSwiper('.benefits-swiper', 9000, swiperOffsetsList.benefits[windowsPositionAsNumber]);
     startSwiper('.clients-swiper', 9000, swiperOffsetsList.clients[windowsPositionAsNumber]);
@@ -235,6 +234,7 @@ window.addEventListener('load', () => {
 
     navbarScroll(document.getElementById('navbar'));
     navbarScroll(document.getElementById('mobile-navbar'));
+    navbarScroll(document.getElementById('logo'));
 
     mobileNavbarToggling();
 
