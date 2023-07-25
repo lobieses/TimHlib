@@ -569,7 +569,7 @@ button {
 
 .footer_contacts {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: start;
 }
 
@@ -847,9 +847,10 @@ button {
 
     .footer_contacts {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         justify-items: center;
         align-items: center;
+        margin-bottom: 20px;
     }
 
     .footer_contacts_item:nth-child(5) {

@@ -235,6 +235,8 @@ window.addEventListener('load', () => {
     navbarScroll(document.getElementById('navbar'));
     navbarScroll(document.getElementById('mobile-navbar'));
     navbarScroll(document.getElementById('logo'));
+    Array.from(document.getElementsByClassName('start_button')).forEach(elem => navbarScroll(elem))
+
 
     mobileNavbarToggling();
 
