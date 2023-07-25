@@ -92,7 +92,7 @@ const navbarScroll = (elem) => {
                 break
             }
             default: {
-                navbarHeight = 100
+                navbarHeight = 99
             }
         }
 
