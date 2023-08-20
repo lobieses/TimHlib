@@ -27,7 +27,7 @@
                 <div data-href="products" class="mobile-navbar-link">Продукти</div>
                 <div data-href="benefits" class="mobile-navbar-link">Переваги</div>
                 <div data-href="clients" class="mobile-navbar-link">Клієнти</div>
-                <div href="#" class="mobile-page-button">Каталог</div>
+                <div href="./pages/catalog/catalog.html" class="mobile-page-button">Каталог</div>
                 <div href="#" class="mobile-page-button">Новини</div>
             </div>
             <header class="home-navbar-interactive">
@@ -44,7 +44,7 @@
                         <div data-href="benefits" class="navbar-link">Переваги</div>
                         <div data-href="clients" class="navbar-link">Партнери</div>
                     </div>
-                    <a href="#" class="page-button">Каталог</a>
+                    <a href="pages/catalog/catalog.html?filters=confectionery,meat,bakery" class="page-button">Каталог</a>
                     <a href="#" class="page-button">Новини</a>
                 </div>
                 <div id="mobile-burger">
@@ -171,9 +171,12 @@
                             <span class="carousel-control-prev-icon"></span>
                         </button>
                         <div class="carousel-indicators">
-                            <button class="active carousel-indicator" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
-                            <button class="carousel-indicator" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button class="carousel-indicator" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button class="active carousel-indicator" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                            <button class="carousel-indicator" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button class="carousel-indicator" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
                         <button class="carousel-control-next" type="button"
                                 data-bs-target="#carouselExampleIndicators"
@@ -274,30 +277,30 @@
         <div class="section_wrapper" id="products">
             <h1 class="title-image-section">Наші Продукти</h1>
             <div class="products-wrapper">
-                <div class="product">
+                <a class="product" href="pages/catalog/catalog.html?filters=bakery">
                     <img alt="milk" src="img/bread.svg" class="product-image" draggable="false">
                     <span class="product_description">
                         хлібобулочна
                         промисловість
                     </span>
                     <div class="product-separator"></div>
-                </div>
-                <div class="product">
+                </a>
+                <a class="product" href="pages/catalog/catalog.html?filters=confectionery">
                     <img alt="ice-cream" src="img/cake.svg" class="product-image">
                     <span class="product_description">
                         кондитерська
                         промисловість
                     </span>
                     <div class="product-separator"></div>
-                </div>
-                <div class="product">
+                </a>
+                <a class="product" href="pages/catalog/catalog.html?filters=meat">
                     <img alt="meat" src="img/meat.svg" class="product-image" draggable="false">
                     <span class="product_description">
                         м’ясна
                         промисловість
                     </span>
                     <div class="product-separator"></div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="section_wrapper white-section" id="benefits">
