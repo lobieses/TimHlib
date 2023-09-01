@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+p, span {
+    margin: 0;
+    padding: 0;
+    font-family: Rubik;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea, input { outline: none; }
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.header {
+    height: 98px;
+    border-bottom: 1px solid #3b3b3b;
+    background: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    transition: 0.3s;
+    filter: invert(100%);
+}
+
+.logo-wrapper:hover .logo {
+    transform: rotate(360deg);
+}
+
+.logo-verline {
+    margin-left: 15px;
+    margin-right: 5px;
+    width: 1px;
+    height: 40px;
+    background-color: #000;
+}
+
+.company-header {
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.contacts-header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.contacts-header-item {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    gap: 10px;
+}
+
+.contacts-header-multiple-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacts-header-item img {
+    width: 20px;
+    height: 20px;
+}
+
+.contacts-header-item p {
+    font-size: 20px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 30px;
+    height: 50px;
+}
+
+.header-button {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 14px 18px;
+    border-radius: 56px;
+    color: #fff;
+    background-color: #f4a261;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    color: #fff;
+    background-color: #3b3b3b;
+}
+
+.body-block-news {
+    margin: 30px 150px;
+}
+
+.body-block-news-sect-2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: #efefef;
+    border-radius: 15px;
+    width: 100%;
+    height: 400px;
+    display: inline-block;
+    float: left;
+}
+
+.body-block-news-sect-2-b1 {
+    width: 380px;
+    height: 380px;
+    border-radius: 20px;
+    margin-right: 30px;
+    float: left;
+    border: solid 1px #525252;
+    background: url("./img/sausage.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.body-block-news-sect-2-b1-2 {
+    width: 380px;
+    height: 380px;
+    border-radius: 20px;
+    margin-left: 30px;
+    float: left;
+    border: solid 1px #525252;
+    background: url("./img/chocolate.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.body-block-news-sect-2-b2 {
+    width: 67%;
+    height: 360px;
+    float: left;
+    border-left: solid 1px #525252;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.body-block-news-sect-2-b2-2 {
+    width: 65%;
+    height: 360px;
+    float: left;
+    text-align: right;
+    border-right: solid 1px #525252;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 25px;
+}
+
+.body-block-news-sect-2-b2-h4 {
+    color: #1c1c1c;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.body-block-news-sect-2-b2-p {
+    color: #757575;
+    font-size: 25px;
+}
+
+.body-block-news-sect-2-b2-b3-2 {
+    float: right;
+}
+
+.news-about-button {
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background: #f4a261;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s all;
+    margin-top: 45px;
+    float: left;
+}
+
+.news-about-button:hover {
+    background: #252525;
+    color: white;
+}
+
+.news-about-button-2 {
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background: #f4a261; 
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s all;
+    margin-top: 45px;
+    float: left;
+    margin-left: 15px;
+}
+
+.news-about-button-2:hover {
+    background: #252525;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
