@@ -422,6 +422,12 @@ button {
     color: #fff;
     background-color: #f4a261;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.mobile-page-button:hover {
+    color: #fff;
+    background-color: #3b3b3b;
 }
 
 #mobile-blackout {
