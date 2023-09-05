@@ -260,6 +260,8 @@ const synchronizeProducts = () => {
 
     insertProductsInMain(products);
     insertProductsInDropdown(products);
+
+    updateDropdownButtonState(products);
 }
 
 // ------------ Search Workers -------------------------------------
@@ -321,20 +323,30 @@ const initializeDropdownFunctionality = () => {
     })
 }
 
+const updateDropdownButtonState = (products) => {
+    const button = document.getElementById('products-filtered-list');
+
+    if(!products.length) {
+        addClassname(button, 'disable')
+    } else {
+        removeClassname(button, 'disable');
+    }
+}
+
 // Catalog Starter
 
 window.addEventListener('load', () => {
     // start listening filter button changing
     startListenFilterButtons();
 
+    // start listening search field
+    startListeningSearchField();
+
     // add focus input on search area click
     focusOnSearchFieldClick();
 
     // synchronize input text with url
     synchronizeSearchFieldWithUrl();
-
-    // start listening search field
-    startListeningSearchField();
 
     // after synchronizing all settings - update catalog
     synchronizeProducts();

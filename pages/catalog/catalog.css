@@ -198,6 +198,10 @@ button {
     right: calc(80px - 85%);
 }
 
+#products-filtered-list.disable {
+    background: #afafaf !important;
+}
+
 #products-filtered-list::before, #products-filtered-list::after {
     content: '';
     position: absolute;
