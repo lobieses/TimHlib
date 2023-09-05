@@ -17,33 +17,49 @@
     <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
-<header class="header">
-
-    <div id="logo" class="logo-wrapper" data-href="head">
-        <img alt="logo" src="../../img/logo2.png" class="logo" data-href="head">
-        <span class="logo-verline" data-href="head"></span>
-        <span class="company-header" data-href="head">ТІМХЛІБ</span>
+<div id="products-filtered-list-blackout"></div>
+<div id="products-filtered-list-dropdown">
+    <div class="close-dropdown-wrapper">
+        <div id="dropdown-close"></div>
     </div>
+    <div id="dropdown-products">
+    </div>
+</div>
+
+<header class="header">
+    <a class="logo-container" href="../../index.html">
+        <img alt="logo" src="../../img/logo.svg" class="logo" data-href="head">
+        <div class="logo-separator"></div>
+        <img alt="logo" src="../../img/logo-company.svg" class="logo-company" data-href="head">
+    </a>
 
     <div class="contacts-header">
         <div class="contacts-header-item">
-            <img src="../../img/calendar.svg" alt="calendar">
-            <div>
-                <p><span style="color: #575757">пн-пт</span> 08:00 - 17:00</p>
-                <p><span style="color: #575757">cб-нд</span> вихідний</p>
-            </div>
+            <img src="../../img/house.svg" alt="house">
+            <p><span style="color: #6c6c6c">Юридична адреса: </span><br/>
+                04060, м. Київ, вул. Ризька, <br>
+                б. 73-Г, оф. 7/1
+            </p>
+        </div>
+
+        <div class="contacts-header-item" style="width: 310px">
+            <img src="../../img/house.svg" alt="house">
+            <p><span style="color: #6c6c6c">Поштова адреса: </span><br/>
+                04080, м. Київ, <br>
+                вул. Новокостянтинівська,11
+            </p>
         </div>
 
         <div class="contacts-header-multiple-items">
 
             <div class="contacts-header-item">
                 <img src="../../img/telephoneGreen.svg" alt="phone">
-                <p>Phone: +380-777-77-77</p>
+                <p>Тел. +38(066)017-98-70</p>
             </div>
 
             <div class="contacts-header-item">
-                <img src="../../img/telephoneGreen.svg" alt="phone">
-                <p>Phone: +380-777-77-77</p>
+                <img src="../../img/envelope.svg" alt="mail">
+                <p>e-mail: mho@timhlib.com</p>
             </div>
 
         </div>
@@ -51,13 +67,13 @@
         <div class="contacts-header-multiple-items">
 
             <div class="contacts-header-item">
-                <img src="../../img/envelope.svg" alt="mail" style="width: 20px; height: 20px">
-                <p>somemail@gmail.com</p>
+                <img src="../../img/telephoneGreen.svg" alt="phone">
+                <p>Тел. +38(050)411-66-10</p>
             </div>
 
             <div class="contacts-header-item">
-                <img src="../../img/envelope.svg" alt="mail" style="width: 20px; height: 20px">
-                <p>somemail@gmail.com</p>
+                <img src="../../img/envelope.svg" alt="mail">
+                <p>e-mail: ovm@timhlib.com</p>
             </div>
 
         </div>
@@ -73,25 +89,31 @@
 <section>
 
     <div class="filter-settings">
+        <div class="filter-buttons">
+            <div id="filters">
+                <div class="filter" data-filter="bakery">
+                    <img src="../../img/bread.svg" alt="bread" draggable="false">
+                    <p class="filters-name">Хлібобулочні</p>
+                </div>
+                <div class="filter" data-filter="confectionery">
+                    <img src="../../img/cake.svg" alt="cookie" draggable="false">
+                    <p class="filters-name">Кондитерські</p>
+                </div>
+                <div class="filter" data-filter="meat">
+                    <img src="../../img/meat.svg" alt="meat" draggable="false">
+                    <p class="filters-name">М'ясні</p>
+                </div>
+            </div>
 
-        <div id="filters">
-            <div class="filter" data-filter="bakery">
-                <img src="../../img/bread.svg" alt="bread" draggable="false">
-                <p class="filters-p-1">Хлібобулочні</p>
-            </div>
-            <div class="filter" data-filter="confectionery">
-                <img src="../../img/cake.svg" alt="cookie" draggable="false">
-                <p class="filters-p-1">Кондитерські</p>
-            </div>
-            <div class="filter" data-filter="meat">
-                <img src="../../img/meat.svg" alt="meat" draggable="false">
-                <p class="filters-p-1">М'ясні</p>
+            <div id="products-filtered-list">
+                <span></span>
             </div>
         </div>
 
+
         <div id="search">
-            <img src="../../img/search.svg" alt="search">
-            <input id="search-input" placeholder="Пошук" />
+            <img src="img/search.svg" alt="search">
+            <input id="search-input" placeholder="Пошук"/>
         </div>
 
     </div>

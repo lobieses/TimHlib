@@ -32,29 +32,21 @@ button {
 }
 
 .header-hero {
-    background-image: url(../img/home-bg-img-1.jpg);
+    background-image: url(img/home-bg-img-1.jpg);
 }
 
 .header-hero-2 {
-    background-image: url(../img/home-bg-img-2.jpg);
+    background-image: url(img/home-bg-img-2.jpg);
 }
 
 .header-hero-3 {
-    background-image: url(../img/home-bg-img-3.jpg);
+    background-image: url(img/home-bg-img-3.jpg);
 }
 
 .header-middle-control {
     width: 100%;
     display: flex;
     align-items: center;
-}
-
-.logo-verline {
-    margin-left: 15px;
-    margin-right: 5px;
-    width: 1px;
-    height: 40px;
-    background-color: #000;
 }
 
 .head_separator {
@@ -182,7 +174,6 @@ button {
 }
 
 
-
 .start_button::before {
     background: #252525;
     box-shadow: inset 0 0 0 60px #f4a261;
@@ -301,31 +292,37 @@ button {
     opacity: 0.7 !important;
 }
 
-.home-branding {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+.logo-container {
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
 }
 
-.home-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    transition: 0.3s;
-    filter: invert(100%);
+.logo {
+    width: 250px;
+    height: 260px;
+    position: absolute;
+    top: -63px;
+    left: -80px;
 }
 
-.home-branding:hover .home-logo {
-    transform: rotate(360deg);
+.logo-separator {
+    position: absolute;
+    height: 80%;
+    right: 205px;
+    bottom: calc(100px - 90%);
+    width: 1px;
+    background: black;
 }
 
-.home-company {
-    color: #000;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    margin-left: 10px;
+.logo-company {
+    width: 250px;
+    height: 260px;
+    position: absolute;
+    top: -80px;
+    right: -25px;
 }
 
 .home-items {
@@ -583,7 +580,7 @@ button {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    width: 210px;
+    width: 215px;
 }
 
 .footer_contacts_item img {
@@ -674,7 +671,7 @@ button {
 }
 
 #products {
-    background-image: url(../img/home-bg-img-4.jpg);
+    background-image: url(img/home-bg-img-4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -682,7 +679,7 @@ button {
 
 #clients {
     width: 100%;
-    background-image: url(../img/home-bg-img-5.jpg);
+    background-image: url(img/home-bg-img-5.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -728,7 +725,7 @@ button {
 }
 
 .home-navbar-interactive {
-    padding: 24px 150px;
+    padding: 0 150px;
 }
 
 @media (max-width: 1440px) {
@@ -802,8 +799,8 @@ button {
     }
 
     .header-wrapper {
-         margin-top: 200px;
-     }
+        margin-top: 200px;
+    }
 
     .header-description, .description_text {
         font-size: 20px;
@@ -1110,7 +1107,7 @@ button {
     }
 
     .footer_contacts_item img {
-        width: 10px !important  ;
+        width: 10px !important;
         height: 10px !important;
     }
 

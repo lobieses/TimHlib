@@ -12,9 +12,9 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap"
             data-tag="font">
-    <link href="css/home.css" rel="stylesheet">
-    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="lib/swiper/swiper.min.css">
+    <link href="index.css" rel="stylesheet">
+    <link href="scripts/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="scripts/swiper/swiper.min.css">
 </head>
 <body>
 <div>
@@ -31,10 +31,10 @@
                 <a href="pages/news/news.html" class="mobile-page-button">Новини</a>
             </div>
             <header class="home-navbar-interactive">
-                <div id="logo" class="home-branding" data-href="head">
-                    <img alt="image" src="img/logo2.png" class="home-logo" data-href="head">
-                    <span class="logo-verline" data-href="head"></span>
-                    <span class="home-company" data-href="head">ТІМХЛІБ</span>
+                <div class="logo-container">
+                    <img alt="logo" src="img/logo.svg" class="logo" data-href="head">
+                    <div class="logo-separator"></div>
+                    <img alt="logo" src="img/logo-company.svg" class="logo-company" data-href="head">
                 </div>
                 <div class="home-items">
                     <div class="home-links" id="navbar">
@@ -44,7 +44,8 @@
                         <div data-href="benefits" class="navbar-link">Переваги</div>
                         <div data-href="clients" class="navbar-link">Партнери</div>
                     </div>
-                    <a href="pages/catalog/catalog.html?filters=confectionery,meat,bakery" class="page-button">Каталог</a>
+                    <a href="pages/catalog/catalog.html?filters=confectionery,meat,bakery"
+                       class="page-button">Каталог</a>
                     <a href="pages/news/news.html" class="page-button">Новини</a>
                 </div>
                 <div id="mobile-burger">
@@ -286,7 +287,7 @@
                     <div class="product-separator"></div>
                 </a>
                 <a class="product" href="pages/catalog/catalog.html?filters=confectionery">
-                    <img alt="ice-cream" src="img/cake.svg" class="product-image">
+                    <img alt="cake" src="img/cake.svg" class="product-image">
                     <span class="product_description">
                         кондитерська
                         промисловість
@@ -391,42 +392,47 @@
                 </h3>
                 <div class="footer_contacts">
                     <div class="footer_contacts_item">
-                        <img src="./img/calendar.svg" alt="calendar">
-                        <p>понеділок-п'ятниця <br/>з 08:00 до 17:00</p>
+                        <img src="./img/house.svg" alt="house" style="width: 20px; height: 20px">
+                        <p>Юридична адреса: <br/>
+                            04060, м. Київ,
+                            вул. Ризька, б. 73-Г, оф. 7/1
+                        </p>
                     </div>
                     <div class="footer_contacts_item">
                         <img src="./img/house.svg" alt="house" style="width: 20px; height: 20px">
-                        <p>головний офіс: <br/>
-                            ADRESS 14-5 B2
+                        <p>Поштова адреса: <br/>
+                            04080, м. Київ,
+                            вул. Новокостянтинівська,11
                         </p>
                     </div>
                     <div>
                         <div class="footer_contacts_item">
-                            <img src="./img/telephoneGreen.svg" alt="calendar">
-                            <p>Phone: +380-777-77-77</p>
+                            <img src="./img/telephoneGreen.svg" alt="telephone">
+                            <p>Тел. +38(066)017-98-70 </p>
                         </div>
                         <div class="footer_contacts_item">
-                            <img src="./img/telephoneGreen.svg" alt="calendar">
-                            <p>Phone: +380-777-77-77</p>
+                            <img src="./img/envelope.svg" alt="house" style="width: 20px; height: 20px">
+                            <p>e-mail: mho@timhlib.com</p>
                         </div>
                     </div>
+
                     <div>
                         <div class="footer_contacts_item">
-                            <img src="./img/envelope.svg" alt="house" style="width: 20px; height: 20px">
-                            <p>somemail@gmail.com</p>
+                            <img src="./img/telephoneGreen.svg" alt="telephone">
+                            <p>Тел. +38(050)411-66-10 </p>
                         </div>
                         <div class="footer_contacts_item">
                             <img src="./img/envelope.svg" alt="house" style="width: 20px; height: 20px">
-                            <p>somemail2@gmail.com</p>
+                            <p>e-mail: ovm@timhlib.com</p>
                         </div>
                     </div>
                 </div>
-                <div class="footer_license">© ТІMХЛІБ 2023 • Всі права захищені</div>
+                <div class="footer_license">ТОВ "ТІМХЛІБ"</div>
             </div>
         </div>
     </div>
-    <script src="lib/bootstrap/bootstrap.min.js"></script>
-    <script src="lib/swiper/swiper.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="scripts/bootstrap/bootstrap.min.js"></script>
+    <script src="scripts/swiper/swiper.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

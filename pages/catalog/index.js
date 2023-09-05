@@ -3,6 +3,12 @@
 const FILTERS_URL_FIELD = 'filters'
 const SEARCH_URL_FIELD = 'search';
 
+const TYPES_TRANSLATOR = {
+    [PRODUCT_TYPES.BAKERY]: 'Хлібобулочні',
+    [PRODUCT_TYPES.MEAT]: "М'ясні",
+    [PRODUCT_TYPES.CONFECTIONERY]: 'Кондитерські'
+}
+
 // ------------ Boiler FNs -------------------------------------
 
 const haveClass = (elem, classn) => elem.className.split(' ').some(existsClassn => existsClassn === classn);
@@ -55,7 +61,7 @@ const changeQueryDataInUrl = (fieldName, data) => {
 const removeQueryFieldFromUrl = (fieldName) => {
     const parsedSearchVariables = parseQueryString();
 
-    if(!Object.keys(parsedSearchVariables).length || !parsedSearchVariables[fieldName]) return;
+    if (!Object.keys(parsedSearchVariables).length || !parsedSearchVariables[fieldName]) return;
 
     delete parsedSearchVariables[fieldName];
 
@@ -172,7 +178,7 @@ const getProductsBySettings = (types, search) => {
 
     if (search && search.length) {
         products = products.filter(product => {
-            const searchRegex = new RegExp(search.toLowerCase() , 'g');
+            const searchRegex = new RegExp(search.toLowerCase(), 'g');
             return searchRegex.test(product.name.toLowerCase());
         });
     }
@@ -180,7 +186,7 @@ const getProductsBySettings = (types, search) => {
     return products
 }
 
-const insertProducts = (products) => {
+const insertProductsInMain = (products) => {
     const catalogField = document.getElementById('products');
     catalogField.innerHTML = '';
 
@@ -211,12 +217,49 @@ const insertProducts = (products) => {
     })
 }
 
-const synchronizeProducts = () => {
+const insertProductsInDropdown = (products) => {
+    const dropdown = document.getElementById('dropdown-products');
+    dropdown.innerHTML = '';
+
+    products.forEach(product => {
+        const productConcentrator = document.createElement('div');
+        productConcentrator.className = 'dropdown-product-concentrator'
+
+        const container = document.createElement('div');
+        container.className = 'dropdown-product-container';
+        container.style.backgroundImage = `url('${product.imageFilePath}')`;
+
+        const name = document.createElement('h2');
+        name.textContent = product.name;
+
+        const typeContainer = document.createElement('div');
+        typeContainer.className = 'dropdown-product-typeContainer';
+
+        const type = document.createElement('h4')
+        type.textContent = TYPES_TRANSLATOR[product.type];
+
+        typeContainer.appendChild(type);
+
+        container.appendChild(name);
+        container.appendChild(typeContainer);
+
+        productConcentrator.appendChild(container)
+
+        dropdown.appendChild(productConcentrator);
+    })
+}
+
+const getActiveProducts = () => {
     const filterCriteria = getFilterCriteria();
 
-    const products = getProductsBySettings(...filterCriteria);
+    return getProductsBySettings(...filterCriteria);
+}
 
-    insertProducts(products);
+const synchronizeProducts = () => {
+    const products = getActiveProducts();
+
+    insertProductsInMain(products);
+    insertProductsInDropdown(products);
 }
 
 // ------------ Search Workers -------------------------------------
@@ -227,14 +270,14 @@ const focusOnSearchFieldClick = () => {
 
     searchField.addEventListener('click', () => input.focus());
 
-    input.addEventListener('focus',  () => addClassname(searchField, 'active-focus'));
-    input.addEventListener('blur',  () => removeClassname(searchField, 'active-focus'))
+    input.addEventListener('focus', () => addClassname(searchField, 'active-focus'));
+    input.addEventListener('blur', () => removeClassname(searchField, 'active-focus'))
 }
 
 const synchronizeSearchFieldWithUrl = () => {
     const searchDataFromUrl = getQueryDataFromUrl(SEARCH_URL_FIELD);
 
-    if(!searchDataFromUrl) return;
+    if (!searchDataFromUrl) return;
 
     const input = document.getElementById('search-input');
     input.value = searchDataFromUrl;
@@ -244,13 +287,37 @@ const startListeningSearchField = () => {
     const input = document.getElementById('search-input');
 
     input.addEventListener('keyup', (e) => {
-        if(e.target.value.length) {
+        if (e.target.value.length) {
             changeQueryDataInUrl(SEARCH_URL_FIELD, e.target.value);
         } else {
             removeQueryFieldFromUrl(SEARCH_URL_FIELD);
         }
 
         synchronizeProducts();
+    })
+}
+
+// ------------ Burger Activator -------------------------------------
+
+const toggleNavbarStatus = (activate, elems) => {
+    elems.forEach(elem => activate ? addClassname(elem, 'active') : removeClassname(elem, 'active'));
+}
+
+const initializeDropdownFunctionality = () => {
+    const buttonActivator = document.getElementById('products-filtered-list');
+    const dropdown = document.getElementById('products-filtered-list-dropdown');
+    const blackout = document.getElementById('products-filtered-list-blackout');
+    const dropdownCloser = document.getElementById('dropdown-close')
+
+    const elemsForActivate = [dropdown, blackout, buttonActivator]
+
+    const elemsCanToggle = [buttonActivator, blackout, dropdownCloser]
+
+    elemsCanToggle.forEach((elem) => {
+        elem.addEventListener('click', () => {
+            if (!getActiveProducts().length) return;
+            toggleNavbarStatus(!haveClass(dropdown, 'active'), elemsForActivate);
+        });
     })
 }
 
@@ -271,6 +338,9 @@ window.addEventListener('load', () => {
 
     // after synchronizing all settings - update catalog
     synchronizeProducts();
+
+    // initialize filtered products dropdown listener
+    initializeDropdownFunctionality();
 })
 
 

@@ -161,13 +161,7 @@ const swiperOffsetsList = {
 }
 
 const manageNavbarStatus = (activate, elems) => {
-    elems.forEach(elem => {
-        if (activate) {
-            addClassname(elem, 'active');
-        } else {
-            deleteClassname(elem, 'active');
-        }
-    })
+    elems.forEach(elem => activate ? addClassname(elem, 'active') : deleteClassname(elem, 'active'))
 }
 
 const mobileNavbarToggling = () => {
@@ -177,20 +171,10 @@ const mobileNavbarToggling = () => {
 
     const navbarElems = [burger, navbar, blackout]
 
-    burger.addEventListener('click', () => {
-        manageNavbarStatus(!haveClass(burger, 'active'), navbarElems);
-    });
-
-    blackout.addEventListener('click', () => {
-        if (haveClass(burger, 'active')) {
-            manageNavbarStatus(false, navbarElems);
-        }
-    })
-
-    navbar.addEventListener('click', (e) => {
-        if (haveClass(e.target, 'mobile-navbar-link')) {
-            manageNavbarStatus(false, navbarElems);
-        }
+    navbarElems.forEach(elem => {
+        elem.addEventListener('click', () => {
+            manageNavbarStatus(!haveClass(burger, 'active'), navbarElems);
+        });
     })
 }
 
@@ -200,7 +184,7 @@ const loopHeaderCarousel = () => {
     const switchClasses = ['carousel-control-next-icon', 'carousel-control-prev-icon', 'carousel-indicator'];
 
     const callback = (e) => {
-        if(switchClasses.some(classn => haveClass(e.target, classn))) {
+        if (switchClasses.some(classn => haveClass(e.target, classn))) {
             clearInterval(loopInterval);
             carousel.removeEventListener('click', callback);
         }
@@ -234,7 +218,6 @@ window.addEventListener('load', () => {
 
     navbarScroll(document.getElementById('navbar'));
     navbarScroll(document.getElementById('mobile-navbar'));
-    navbarScroll(document.getElementById('logo'));
     Array.from(document.getElementsByClassName('start_button')).forEach(elem => navbarScroll(elem))
 
 
