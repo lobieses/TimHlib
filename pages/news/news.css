@@ -107,6 +107,11 @@ button {
     font-size: 20px;
 }
 
+.large-contact {
+    width: 310px;
+    align-items: flex-start;
+}
+
 .header-buttons {
     display: flex;
     gap: 30px;
@@ -287,6 +292,207 @@ button {
 .separator img {
     width: 30px;
     height: 30px;
+}
+
+#contact-button {
+    display: none;
+}
+
+#contacts-dropdown {
+    position: absolute;
+    z-index: 999;
+    height: 300px;
+    width: 100vw;
+    top: -1000px;
+    background: #fff;
+    transition: 0.3s top;
+}
+
+#contacts-dropdown.active {
+    top: 0;
+}
+
+#dropdown-contact-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+#dropdown-contact-close::before, #dropdown-contact-close::after {
+    content: '';
+    height: 100%;
+    width: 2px;
+    background: black;
+
+    left: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+#dropdown-contact-close::before {
+    top: 0;
+}
+
+#dropdown-contact-close::after {
+    transform: rotate(-45deg);
+}
+
+.contacts-dropdown-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+.contacts-dropdown-container img {
+    width: 33px;
+    height: 33px;
+}
+
+.contacts-dropdown, .contacts-dropdown-multiple {
+    display: flex;
+    gap: 10px;
+}
+
+.contacts-dropdown {
+    align-items: center;
+}
+
+.contacts-dropdown-multiple {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacts-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 2120px) {
+
+    .header {
+        padding: 0 70px;
+    }
+}
+
+
+@media (max-width: 1960px) {
+    .contacts-header-item {
+        width: 220px !important;
+
+    }
+
+    .contacts-header-item p {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 1700px) {
+
+    .header {
+        padding: 0 150px;
+    }
+
+    .contacts-header {
+        display: none;
+    }
+
+    #contact-button {
+        display: block;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .contacts-dropdown-container {
+        font-size: 15px;
+    }
+
+    .contacts-dropdown-container img {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+@media (max-width: 970px) {
+
+    .contacts-dropdown-container {
+        font-size: 12px;
+    }
+
+    .contacts-dropdown-container img {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .contacts-dropdown-multiple {
+        gap: 5px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    #contacts-dropdown {
+        height: 500px;
+    }
+
+    .contacts-dropdown-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    .contacts-dropdown-container {
+        font-size: 20px;
+    }
+
+    .contacts-dropdown-container img {
+        width: 33px;
+        height: 33px;
+    }
+
+
+    .contacts-dropdown-multiple {
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .contacts-dropdown-container {
+        font-size: 15px;
+    }
+
+    .contacts-dropdown-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+@media (max-width: 470px) {
+    #contacts-dropdown {
+        height: 700px;
+    }
+
+    .contacts-dropdown-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
 }
 
 

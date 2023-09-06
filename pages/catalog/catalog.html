@@ -34,8 +34,58 @@
     <div class="is-available"></div>
 </div>
 
-<!-- Dropdown -->
-<div id="products-filtered-list-blackout"></div>
+<!-- Contacts Dropdown -->
+<div id="contacts-dropdown">
+    <div class="contacts-dropdown-container">
+        <div class="contacts-dropdown">
+            <img src="../../img/house.svg" alt="house">
+            <p><span style="color: #6c6c6c">Юридична адреса: </span><br/>
+                04060, м. Київ, вул. Ризька, <br>
+                б. 73-Г, оф. 7/1
+            </p>
+        </div>
+
+        <div class="contacts-dropdown">
+            <img src="../../img/house.svg" alt="house">
+            <p><span style="color: #6c6c6c">Поштова адреса: </span><br/>
+                04080, м. Київ, <br>
+                вул. Новокостянтинівська,11
+            </p>
+        </div>
+
+        <div class="contacts-dropdown-multiple">
+
+            <div class="contacts-dropdown-item">
+                <img src="../../img/telephoneGreen.svg" alt="phone">
+                <p>Тел. +38(066)017-98-70</p>
+            </div>
+
+            <div class="contacts-dropdown-item">
+                <img src="../../img/envelope.svg" alt="mail">
+                <p>e-mail: mho@timhlib.com</p>
+            </div>
+
+        </div>
+
+        <div class="contacts-dropdown-multiple">
+
+            <div class="contacts-dropdown-item">
+                <img src="../../img/telephoneGreen.svg" alt="phone">
+                <p>Тел. +38(050)411-66-10</p>
+            </div>
+
+            <div class="contacts-dropdown-item">
+                <img src="../../img/envelope.svg" alt="mail">
+                <p>e-mail: ovm@timhlib.com</p>
+            </div>
+
+        </div>
+
+        <div id="dropdown-contact-close"></div>
+    </div>
+</div>
+
+<!-- Products Dropdown -->
 <div id="products-filtered-list-dropdown">
     <div class="close-dropdown-wrapper">
         <div id="dropdown-close"></div>
@@ -53,7 +103,7 @@
     </a>
 
     <div class="contacts-header">
-        <div class="contacts-header-item">
+        <div class="contacts-header-item large-contact">
             <img src="../../img/house.svg" alt="house">
             <p><span style="color: #6c6c6c">Юридична адреса: </span><br/>
                 04060, м. Київ, вул. Ризька, <br>
@@ -61,7 +111,7 @@
             </p>
         </div>
 
-        <div class="contacts-header-item" style="width: 310px">
+        <div class="contacts-header-item large-contact">
             <img src="../../img/house.svg" alt="house">
             <p><span style="color: #6c6c6c">Поштова адреса: </span><br/>
                 04080, м. Київ, <br>
@@ -99,6 +149,7 @@
     </div>
 
     <div class="header-buttons">
+        <button id="contact-button" class="header-button">Контакти</button>
         <a href="../../index.html" class="header-button">Головна</a>
         <a href="../news/news.html" class="header-button">Новини</a>
     </div>
@@ -143,6 +194,7 @@
 
 </section>
 
+<script src="../../scripts/dropdown/dropdown.js"></script>
 <script src="../../scripts/modal/modal.js"></script>
 <script src="products.js"></script>
 <script src="index.js"></script>

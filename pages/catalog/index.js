@@ -9,7 +9,7 @@ const TYPES_TRANSLATOR = {
     [PRODUCT_TYPES.CONFECTIONERY]: 'Кондитерські'
 }
 
-let modalScript;
+let modalSupport;
 
 const INSERT_TYPES = {
     IMG: 'IMG',
@@ -288,7 +288,7 @@ const synchronizeProducts = () => {
     // Update dropdown button state based on filtered products
     updateDropdownButtonState(products);
 
-    modalScript.synchronize();
+    modalSupport.synchronize();
 }
 
 // ------------ Search Workers -------------------------------------
@@ -324,46 +324,6 @@ const startListeningSearchField = () => {
 
         synchronizeProducts();
     })
-}
-
-// ------------ Burger Activator -------------------------------------
-
-const toggleNavbarStatus = (activate, elems) => {
-    elems.forEach(elem => activate ? addClassname(elem, 'active') : removeClassname(elem, 'active'));
-}
-
-const initializeDropdownFunctionality = () => {
-    const buttonActivator = document.getElementById('products-filtered-list');
-    const dropdown = document.getElementById('products-filtered-list-dropdown');
-    const blackout = document.getElementById('products-filtered-list-blackout');
-    const dropdownCloser = document.getElementById('dropdown-close')
-
-    const elemsForActivate = [dropdown, blackout, buttonActivator]
-
-    const elemsCanToggle = [buttonActivator, blackout, dropdownCloser]
-
-    elemsCanToggle.forEach((elem) => {
-        elem.addEventListener('click', () => {
-            if (!getActiveProducts().length) return;
-            toggleNavbarStatus(!haveClass(dropdown, 'active'), elemsForActivate);
-        });
-    })
-
-    //Close dropdown on open modal
-    modalScript.applyObservers(modalScript.getEventsList().OPEN, () => {
-        if (!haveClass(dropdown, 'active')) return;
-        toggleNavbarStatus(false, elemsForActivate);
-    })
-}
-
-const updateDropdownButtonState = (products) => {
-    const button = document.getElementById('products-filtered-list');
-
-    if (!products.length) {
-        addClassname(button, 'disable')
-    } else {
-        removeClassname(button, 'disable');
-    }
 }
 
 // ------------ Modal Templates Creator -------------------------------------
@@ -433,6 +393,46 @@ const fulfillModals = () => {
     modalTemplate.remove();
 }
 
+// ------------ Product Dropdown -------------------------------------
+
+const initializeProductDropdownFunctionality = () => {
+    const buttonActivator = document.getElementById('products-filtered-list');
+    const dropdown = document.getElementById('products-filtered-list-dropdown');
+    const dropdownCloser = document.getElementById('dropdown-close');
+
+    const elemsForActivate = [dropdown];
+    const elemsCanToggle = [buttonActivator, dropdownCloser];
+
+    const dropdownSupport = new DropdownSupport(elemsForActivate, elemsCanToggle, [() => !!getActiveProducts().length])
+
+    //Close dropdown on open product modal
+    modalSupport.applyObservers(modalSupport.getEventsList().OPEN, () => {
+        if (dropdownSupport.isActive()) dropdownSupport.forceClose();
+    })
+}
+
+const updateDropdownButtonState = (products) => {
+    const button = document.getElementById('products-filtered-list');
+
+    if (!products.length) {
+        addClassname(button, 'disable')
+    } else {
+        removeClassname(button, 'disable');
+    }
+}
+
+// ------------ Contact Dropdown -------------------------------------
+const initializeContactDropdownFunctionality = () => {
+    const dropdown = document.getElementById('contacts-dropdown');
+    const button = document.getElementById('contact-button');
+    const closeButton = document.getElementById('dropdown-contact-close');
+
+    const elemsForActivate = [dropdown];
+    const elemsCanToggle = [button, closeButton];
+
+    const dropdownSupport = new DropdownSupport(elemsForActivate, elemsCanToggle);
+}
+
 // Catalog Starter
 
 window.addEventListener('load', () => {
@@ -452,14 +452,17 @@ window.addEventListener('load', () => {
     synchronizeSearchFieldWithUrl();
 
     // Initialize modal script
-    modalScript = new ModalScript();
-    modalScript.initializeModalFunctionality();
+    modalSupport = new ModalSupport();
+    modalSupport.initializeModalFunctionality();
 
     // after synchronizing all settings - update catalog
     synchronizeProducts();
 
     // initialize filtered products dropdown listener
-    initializeDropdownFunctionality();
+    initializeProductDropdownFunctionality();
+
+    //initialize contact dropdown
+    initializeContactDropdownFunctionality();
 })
 
 

@@ -1,4 +1,4 @@
-class ModalScript {
+class ModalSupport {
     _modalBlackout;
     _activeModal;
     _modalIsActive = false;

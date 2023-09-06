@@ -18,18 +18,18 @@
 </head>
 <body>
 <div>
+    <div id="mobile-navbar">
+        <div data-href="head" class="mobile-navbar-link">Головна</div>
+        <div data-href="about-us" class="mobile-navbar-link">Про нас</div>
+        <div data-href="products" class="mobile-navbar-link">Продукти</div>
+        <div data-href="benefits" class="mobile-navbar-link">Переваги</div>
+        <div data-href="clients" class="mobile-navbar-link">Клієнти</div>
+        <a href="./pages/catalog/catalog.html?filters=confectionery,meat,bakery" class="mobile-page-button">Каталог</a>
+        <a href="pages/news/news.html" class="mobile-page-button">Новини</a>
+    </div>
     <div id="mobile-blackout"></div>
     <div class="header-container">
         <div class="home-navbar">
-            <div id="mobile-navbar">
-                <div data-href="head" class="mobile-navbar-link">Головна</div>
-                <div data-href="about-us" class="mobile-navbar-link">Про нас</div>
-                <div data-href="products" class="mobile-navbar-link">Продукти</div>
-                <div data-href="benefits" class="mobile-navbar-link">Переваги</div>
-                <div data-href="clients" class="mobile-navbar-link">Клієнти</div>
-                <a href="./pages/catalog/catalog.html?filters=confectionery,meat,bakery" class="mobile-page-button">Каталог</a>
-                <a href="pages/news/news.html" class="mobile-page-button">Новини</a>
-            </div>
             <header class="home-navbar-interactive">
                 <div class="logo-container">
                     <img alt="logo" src="img/logo.svg" class="logo" data-href="head">
@@ -431,6 +431,7 @@
             </div>
         </div>
     </div>
+    <script src="./scripts/dropdown/dropdown.js"></script>
     <script src="scripts/bootstrap/bootstrap.min.js"></script>
     <script src="scripts/swiper/swiper.min.js"></script>
     <script src="index.js"></script>
