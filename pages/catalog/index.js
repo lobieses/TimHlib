@@ -9,6 +9,24 @@ const TYPES_TRANSLATOR = {
     [PRODUCT_TYPES.CONFECTIONERY]: 'Кондитерські'
 }
 
+let modalScript;
+
+const INSERT_TYPES = {
+    IMG: 'IMG',
+    TEXT: 'TEXT',
+    BOOLEAN: 'BOOLEAN',
+    LIST: 'LIST'
+}
+
+const MODAL_FULFILL_MAP = {
+    'modal-image': {productField: 'imageFilePath', type: INSERT_TYPES.IMG},
+    'modal-name': {productField: 'name', type: INSERT_TYPES.TEXT},
+    'modal-description': {productField: 'description', type: INSERT_TYPES.TEXT},
+    'benefits': {productField: 'benefits', type: INSERT_TYPES.LIST},
+    'field-of-application': {productField: 'fieldOfApplication', type: INSERT_TYPES.TEXT},
+    'is-available': {productField: 'available', type: INSERT_TYPES.BOOLEAN},
+}
+
 // ------------ Boiler FNs -------------------------------------
 
 const haveClass = (elem, classn) => elem.className.split(' ').some(existsClassn => existsClassn === classn);
@@ -197,6 +215,8 @@ const insertProductsInMain = (products) => {
         const image = document.createElement('div');
         image.className = 'product-image';
         image.style.backgroundImage = `url('${product.imageFilePath}')`;
+        // Mark as modal activator
+        addClassname(image, modalActivatorClassCreatorBasedOnProductId(product.id));
 
         const name = document.createElement('h3');
         name.textContent = product.name;
@@ -207,6 +227,8 @@ const insertProductsInMain = (products) => {
         const aboutButton = document.createElement('button');
         aboutButton.className = 'product-about-button';
         aboutButton.textContent = 'Дізнатися більше';
+        // Mark as modal activator
+        addClassname(aboutButton, modalActivatorClassCreatorBasedOnProductId(product.id));
 
         wrapper.appendChild(image);
         wrapper.appendChild(name);
@@ -228,6 +250,8 @@ const insertProductsInDropdown = (products) => {
         const container = document.createElement('div');
         container.className = 'dropdown-product-container';
         container.style.backgroundImage = `url('${product.imageFilePath}')`;
+        // Mark as modal activator
+        addClassname(container, modalActivatorClassCreatorBasedOnProductId(product.id));
 
         const name = document.createElement('h2');
         name.textContent = product.name;
@@ -261,7 +285,10 @@ const synchronizeProducts = () => {
     insertProductsInMain(products);
     insertProductsInDropdown(products);
 
+    // Update dropdown button state based on filtered products
     updateDropdownButtonState(products);
+
+    modalScript.synchronize();
 }
 
 // ------------ Search Workers -------------------------------------
@@ -321,21 +348,97 @@ const initializeDropdownFunctionality = () => {
             toggleNavbarStatus(!haveClass(dropdown, 'active'), elemsForActivate);
         });
     })
+
+    //Close dropdown on open modal
+    modalScript.applyObservers(modalScript.getEventsList().OPEN, () => {
+        if (!haveClass(dropdown, 'active')) return;
+        toggleNavbarStatus(false, elemsForActivate);
+    })
 }
 
 const updateDropdownButtonState = (products) => {
     const button = document.getElementById('products-filtered-list');
 
-    if(!products.length) {
+    if (!products.length) {
         addClassname(button, 'disable')
     } else {
         removeClassname(button, 'disable');
     }
 }
 
+// ------------ Modal Templates Creator -------------------------------------
+
+const modalActivatorClassCreatorBasedOnProductId = (id) => `modal-product-activator-${id}`;
+
+const generateLayoutByFulfillMap = (template, product) => {
+    Object.keys(MODAL_FULFILL_MAP).forEach(classname => {
+        const productField = MODAL_FULFILL_MAP[classname].productField;
+        const type = MODAL_FULFILL_MAP[classname].type;
+        const productValue = product[productField];
+
+        if (typeof productValue !== 'boolean' && !productValue) return;
+
+        const elem = template.getElementsByClassName(classname)[0];
+        if (!elem) return;
+
+
+        switch (type) {
+            case INSERT_TYPES.IMG: {
+                elem.src = productValue;
+                break;
+            }
+            case INSERT_TYPES.LIST: {
+                if (!Array.isArray(productValue)) break
+                productValue.forEach(str => {
+                    const li = document.createElement('li');
+                    li.innerHTML = str;
+                    elem.append(li);
+                })
+                break;
+            }
+            case INSERT_TYPES.BOOLEAN: {
+                addClassname(elem, productValue ? 'positive' : 'negative');
+                break;
+            }
+            case INSERT_TYPES.TEXT: {
+                elem.innerHTML = productValue;
+            }
+        }
+    })
+}
+
+const fulfillModals = () => {
+    const modalTemplate = document.getElementById('modal-template');
+    if (!modalTemplate) return;
+
+    //remove id attribute to avoid errors
+    modalTemplate.removeAttribute('id');
+
+    //Add classname for 'modal' script detecting
+    addClassname(modalTemplate, 'modal-entry');
+
+    PRODUCTS.forEach(product => {
+        //Make deep copy of template
+        const template = modalTemplate.cloneNode(true);
+        //Define class activator
+        template.dataset.activatorsClass = modalActivatorClassCreatorBasedOnProductId(product.id);
+
+        //Push values to modal
+        generateLayoutByFulfillMap(template, product);
+
+        document.body.prepend(template);
+    })
+
+    //Remove useless template from DOM
+    modalTemplate.remove();
+}
+
 // Catalog Starter
 
 window.addEventListener('load', () => {
+    // fulfill page by product modals for 'modal' script
+    fulfillModals();
+
     // start listening filter button changing
     startListenFilterButtons();
 
@@ -347,6 +450,10 @@ window.addEventListener('load', () => {
 
     // synchronize input text with url
     synchronizeSearchFieldWithUrl();
+
+    // Initialize modal script
+    modalScript = new ModalScript();
+    modalScript.initializeModalFunctionality();
 
     // after synchronizing all settings - update catalog
     synchronizeProducts();

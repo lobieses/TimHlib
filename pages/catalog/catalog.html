@@ -17,6 +17,24 @@
     <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
+<!-- Modal Template -->
+<div id="modal-template" class="product-modal-template">
+    <img class="modal-image">
+    <div class="modal-about">
+        <h3 class="modal-name"></h3>
+        <span class="modal-description"></span>
+    </div>
+
+    <div>
+        <h4>галузь застосування</h4>
+        <span class="field-of-application"></span>
+    </div>
+    <ul class="benefits">
+    </ul>
+    <div class="is-available"></div>
+</div>
+
+<!-- Dropdown -->
 <div id="products-filtered-list-blackout"></div>
 <div id="products-filtered-list-dropdown">
     <div class="close-dropdown-wrapper">
@@ -26,6 +44,7 @@
     </div>
 </div>
 
+<!-- Page -->
 <header class="header">
     <a class="logo-container" href="../../index.html">
         <img alt="logo" src="../../img/logo.svg" class="logo" data-href="head">
@@ -124,6 +143,7 @@
 
 </section>
 
+<script src="../../scripts/modal/modal.js"></script>
 <script src="products.js"></script>
 <script src="index.js"></script>
 </body>
