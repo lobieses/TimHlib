@@ -232,7 +232,7 @@ button {
 .home-navbar {
     width: 100%;
     display: flex;
-    z-index: 100;
+    z-index: 999;
     position: fixed;
     align-self: center;
     align-items: center;
@@ -424,21 +424,6 @@ button {
 .mobile-page-button:hover {
     color: #fff;
     background-color: #3b3b3b;
-}
-
-#mobile-blackout {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: transparent;
-    opacity: 0.7;
-    z-index: 0;
-    transition: all 0.3s ease;
-}
-
-#mobile-blackout.active {
-    background: #000;
-    z-index: 10;
 }
 
 .home-links {

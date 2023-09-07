@@ -160,29 +160,16 @@ const swiperOffsetsList = {
     }
 }
 
-const manageNavbarStatus = (activate, elems) => {
-    elems.forEach(elem => activate ? addClassname(elem, 'active') : deleteClassname(elem, 'active'))
-}
-
 const mobileNavbarToggling = () => {
     const burger = document.getElementById('mobile-burger');
     const navbar = document.getElementById('mobile-navbar');
-    const blackout = document.getElementById('mobile-blackout');
     const navbarLinks = document.getElementsByClassName('mobile-navbar-link');
-
-    // const navbarElems = [burger, navbar, blackout];
 
     const elemsForActivate = [burger, navbar];
     const elemsCanToggle = [burger, ...Array.from(navbarLinks)];
 
 
     new DropdownSupport(elemsForActivate, elemsCanToggle);
-
-    // navbarElems.forEach(elem => {
-    //     elem.addEventListener('click', () => {
-    //         manageNavbarStatus(!haveClass(burger, 'active'), navbarElems);
-    //     });
-    // })
 }
 
 const loopHeaderCarousel = () => {

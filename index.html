@@ -4,436 +4,432 @@
     <title>TIMHLIB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-            data-tag="font">
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap"
-            data-tag="font">
+    <link rel="icon" type="image/png" href="./img/favicon.ico"/>
+
+    <!-- Fonts -->
+    <link href="./fonts/fonts.css" rel="stylesheet">
+
+    <!-- Css -->
     <link href="index.css" rel="stylesheet">
     <link href="scripts/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="scripts/swiper/swiper.min.css">
 </head>
 <body>
-<div>
-    <div id="mobile-navbar">
-        <div data-href="head" class="mobile-navbar-link">Головна</div>
-        <div data-href="about-us" class="mobile-navbar-link">Про нас</div>
-        <div data-href="products" class="mobile-navbar-link">Продукти</div>
-        <div data-href="benefits" class="mobile-navbar-link">Переваги</div>
-        <div data-href="clients" class="mobile-navbar-link">Клієнти</div>
-        <a href="./pages/catalog/catalog.html?filters=confectionery,meat,bakery" class="mobile-page-button">Каталог</a>
-        <a href="pages/news/news.html" class="mobile-page-button">Новини</a>
+<div class="header-container">
+    <div class="home-navbar">
+        <div id="mobile-navbar">
+            <div data-href="head" class="mobile-navbar-link">Головна</div>
+            <div data-href="about-us" class="mobile-navbar-link">Про нас</div>
+            <div data-href="products" class="mobile-navbar-link">Продукти</div>
+            <div data-href="benefits" class="mobile-navbar-link">Переваги</div>
+            <div data-href="clients" class="mobile-navbar-link">Клієнти</div>
+            <a href="./pages/catalog/catalog.html?filters=confectionery,meat,bakery" class="mobile-page-button">Каталог</a>
+            <a href="pages/news/news.html" class="mobile-page-button">Новини</a>
+        </div>
+        <header class="home-navbar-interactive">
+            <div class="logo-container">
+                <img alt="logo" src="img/logo.svg" class="logo" data-href="head">
+                <div class="logo-separator"></div>
+                <img alt="logo" src="img/logo-company.svg" class="logo-company" data-href="head">
+            </div>
+            <div class="home-items">
+                <div class="home-links" id="navbar">
+                    <div data-href="head" class="navbar-link">Головна</div>
+                    <div data-href="about-us" class="navbar-link">Про нас</div>
+                    <div data-href="products" class="navbar-link">Продукти</div>
+                    <div data-href="benefits" class="navbar-link">Переваги</div>
+                    <div data-href="clients" class="navbar-link">Партнери</div>
+                </div>
+                <a href="pages/catalog/catalog.html?filters=confectionery,meat,bakery"
+                   class="page-button">Каталог</a>
+                <a href="pages/news/news.html" class="page-button">Новини</a>
+            </div>
+            <div id="mobile-burger">
+                <span></span>
+            </div>
+        </header>
     </div>
-    <div id="mobile-blackout"></div>
-    <div class="header-container">
-        <div class="home-navbar">
-            <header class="home-navbar-interactive">
-                <div class="logo-container">
-                    <img alt="logo" src="img/logo.svg" class="logo" data-href="head">
-                    <div class="logo-separator"></div>
-                    <img alt="logo" src="img/logo-company.svg" class="logo-company" data-href="head">
-                </div>
-                <div class="home-items">
-                    <div class="home-links" id="navbar">
-                        <div data-href="head" class="navbar-link">Головна</div>
-                        <div data-href="about-us" class="navbar-link">Про нас</div>
-                        <div data-href="products" class="navbar-link">Продукти</div>
-                        <div data-href="benefits" class="navbar-link">Переваги</div>
-                        <div data-href="clients" class="navbar-link">Партнери</div>
-                    </div>
-                    <a href="pages/catalog/catalog.html?filters=confectionery,meat,bakery"
-                       class="page-button">Каталог</a>
-                    <a href="pages/news/news.html" class="page-button">Новини</a>
-                </div>
-                <div id="mobile-burger">
-                    <span></span>
-                </div>
-            </header>
-        </div>
-        <div class="carousel-main-page-div" id="head">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <header class="header-hero">
-                            <div class="header-wrapper">
-                                <h1 class="header-title">
-                                    Т І М Х Л І Б
-                                </h1>
-                                <h2 class="header-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod consectetur tempor incididunt.
-                                </h2>
-                                <div class="header-middle-control">
-                                    <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="head_separator" id="head_separator"></div>
-                                    <button class="carousel-control-next" id="header-next-button" type="button"
-                                            data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    </button>
-                                </div>
+    <div class="carousel-main-page-div" id="head">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <header class="header-hero">
+                        <div class="header-wrapper">
+                            <h1 class="header-title">
+                                Т І М Х Л І Б
+                            </h1>
+                            <h2 class="header-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod consectetur tempor incididunt.
+                            </h2>
+                            <div class="header-middle-control">
+                                <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <div class="head_separator" id="head_separator"></div>
+                                <button class="carousel-control-next" id="header-next-button" type="button"
+                                        data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
 
-                                <p class="description_text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
-                                    sit.
-                                </p>
-                                <div class="header-start">
-                                    <button class="start_button" data-href="about-us">
-                                        <span data-href="about-us">Почати</span>
-                                    </button>
-                                </div>
+                            <p class="description_text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
+                                sit.
+                            </p>
+                            <div class="header-start">
+                                <button class="start_button" data-href="about-us">
+                                    <span data-href="about-us">Почати</span>
+                                </button>
                             </div>
-                        </header>
-                    </div>
-                    <div class="carousel-item">
-                        <header class="header-hero-2">
-                            <div class="header-wrapper">
-                                <h1 class="header-title">
-                                    <span>Т І М Х Л І Б</span>
-                                </h1>
-                                <h2 class="header-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod consectetur tempor incididunt Lorem, ipsum dolor sit amet..
-                                </h2>
-                                <div class="header-middle-control">
-                                    <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="head_separator" style="width: 100% !important;"></div>
-                                    <button class="carousel-control-next" type="button"
-                                            data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    </button>
-                                </div>
-                                <p class="description_text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
-                                    sit.
-                                </p>
-                                <div class="header-start">
-                                    <button class="start_button" data-href="about-us">
-                                        <span data-href="about-us">Почати</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </header>
-                    </div>
-                    <div class="carousel-item">
-                        <header class="header-hero-3">
-                            <div class="header-wrapper">
-                                <h1 class="header-title">
-                                    <span>Т І М Х Л І Б</span>
-                                </h1>
-                                <h2 class="header-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod consectetur tempor incididunt. Lorem ipsum dolor sit amet consectetur.
-                                </h2>
-                                <div class="header-middle-control">
-                                    <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    </button>
-                                    <div class="head_separator" style="width: 100% !important;"></div>
-                                    <button class="carousel-control-next" type="button"
-                                            data-bs-target="#carouselExampleIndicators"
-                                            data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    </button>
-                                </div>
-                                <p class="description_text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
-                                    sit.
-                                </p>
-                                <div class="header-start">
-                                    <button class="start_button" data-href="about-us">
-                                        <span data-href="about-us">Почати</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </header>
-                    </div>
-                    <div class="header-down-control-panel">
-                        <button class="carousel-control-prev"
-                                data-bs-target="#carouselExampleIndicators"
-                                data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <div class="carousel-indicators">
-                            <button class="active carousel-indicator" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
-                            <button class="carousel-indicator" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button class="carousel-indicator" data-bs-target="#carouselExampleIndicators"
-                                    data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleIndicators"
-                                data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
+                    </header>
+                </div>
+                <div class="carousel-item">
+                    <header class="header-hero-2">
+                        <div class="header-wrapper">
+                            <h1 class="header-title">
+                                <span>Т І М Х Л І Б</span>
+                            </h1>
+                            <h2 class="header-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod consectetur tempor incididunt Lorem, ipsum dolor sit amet..
+                            </h2>
+                            <div class="header-middle-control">
+                                <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <div class="head_separator" style="width: 100% !important;"></div>
+                                <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <p class="description_text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
+                                sit.
+                            </p>
+                            <div class="header-start">
+                                <button class="start_button" data-href="about-us">
+                                    <span data-href="about-us">Почати</span>
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="carousel-item">
+                    <header class="header-hero-3">
+                        <div class="header-wrapper">
+                            <h1 class="header-title">
+                                <span>Т І М Х Л І Б</span>
+                            </h1>
+                            <h2 class="header-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod consectetur tempor incididunt. Lorem ipsum dolor sit amet consectetur.
+                            </h2>
+                            <div class="header-middle-control">
+                                <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <div class="head_separator" style="width: 100% !important;"></div>
+                                <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <p class="description_text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod consectetur tempor incididunt.&nbsp;Lorem ipsum dolor
+                                sit.
+                            </p>
+                            <div class="header-start">
+                                <button class="start_button" data-href="about-us">
+                                    <span data-href="about-us">Почати</span>
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="header-down-control-panel">
+                    <button class="carousel-control-prev"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button class="active carousel-indicator" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                        <button class="carousel-indicator" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button class="carousel-indicator" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
+                    <button class="carousel-control-next" type="button"
+                            data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="section_wrapper white-section" id="about-us">
-            <div class="about-us-content">
-                <h1 class="title-black-section">Про Компанiю</h1>
-                <div class="separator" id="about-us-separator">
-                    <div class="left_separator"></div>
-                    <img src="./img/separator_icon.svg" alt="wheat">
-                    <div class="right_separator"></div>
-                </div>
-                <p class="about-us-paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="swiper about-swiper">
-                <div class="about-company-container swiper-wrapper">
-                    <div class="about-us-item swiper-slide">
-                        <img
-                                alt="image"
-                                src="./img/check.png"
-                                class="about_us_icon"
-                        />
-                        <span class="about_icon_description">Контроль Якості</span>
-                    </div>
-                    <div class="about-us-item swiper-slide">
-                        <img
-                                alt="image"
-                                src="./img/wheat.png"
-                                class="about_us_icon"
-                        />
-                        <span class="about_icon_description about-us-text02">Чистий продукт</span>
-                    </div>
-                    <div class="about-us-item swiper-slide">
-                        <img
-                                alt="image"
-                                src="./img/gears.png"
-                                class="about_us_icon"
-                        />
-                        <span class="about_icon_description about-us-text03">Сучасні технології</span>
-                    </div>
-                    <div class="about-us-item swiper-slide">
-                        <img
-                                alt="image"
-                                src="./img/truck.png"
-                                class="about_us_icon"
-                        />
-                        <span class="about_icon_description">Доставка продукцiї</span>
-                    </div>
-                    <div class="about-us-item swiper-slide">
-                        <img
-                                alt="image"
-                                src="./img/bag.png"
-                                class="about_us_icon"
-                        />
-                        <span class="about_icon_description">Роздрібні продажі</span>
-                    </div>
-                    <div class="about-us-item swiper-slide">
-                        <img
-                                alt="image"
-                                src="./img/factory.png"
-                                class="about_us_icon"
-                        />
-                        <span class="about_icon_description">Виробництво продукiї</span>
-                    </div>
-                    <div class="about-us-item swiper-slide">
-                        <img
-                                alt="image"
-                                src="./img/containers.png"
-                                class="about_us_icon"
-                        />
-                        <span class="about_icon_description">Логiстичнi центри</span>
-                    </div>
-                    <div class="about-us-item swiper-slide">
-                        <img
-                                alt="image"
-                                src="./img/loader.png"
-                                class="about_us_icon"
-                        />
-                        <span class="about_icon_description">Оптовi продажi</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section_wrapper" id="products">
-            <h1 class="title-image-section">Наші Продукти</h1>
-            <div class="products-wrapper">
-                <a class="product" href="pages/catalog/catalog.html?filters=bakery">
-                    <img alt="milk" src="img/bread.svg" class="product-image" draggable="false">
-                    <span class="product_description">
-                        хлібобулочна
-                        промисловість
-                    </span>
-                    <div class="product-separator"></div>
-                </a>
-                <a class="product" href="pages/catalog/catalog.html?filters=confectionery">
-                    <img alt="cake" src="img/cake.svg" class="product-image">
-                    <span class="product_description">
-                        кондитерська
-                        промисловість
-                    </span>
-                    <div class="product-separator"></div>
-                </a>
-                <a class="product" href="pages/catalog/catalog.html?filters=meat">
-                    <img alt="meat" src="img/meat.svg" class="product-image" draggable="false">
-                    <span class="product_description">
-                        м’ясна
-                        промисловість
-                    </span>
-                    <div class="product-separator"></div>
-                </a>
-            </div>
-        </div>
-        <div class="section_wrapper white-section" id="benefits">
-            <h1 class="title-black-section">Наші Переваги</h1>
-            <div class="separator" id="benefits-separator">
+    </div>
+    <div class="section_wrapper white-section" id="about-us">
+        <div class="about-us-content">
+            <h1 class="title-black-section">Про Компанiю</h1>
+            <div class="separator" id="about-us-separator">
                 <div class="left_separator"></div>
                 <img src="./img/separator_icon.svg" alt="wheat">
                 <div class="right_separator"></div>
             </div>
-            <div class="benefit-wrapper swiper benefits-swiper">
-                <div class="swiper-wrapper">
-                    <div class="benefit swiper-slide">
-                        <img alt="image" src="./img/bag.png" class="benefit-img">
-                        <span class="benefit-title">Happy clients</span>
-                        <span class="benefit-description">
-                     Lorem ipsum dolor sit amet, consectetur.
-                     </span>
-                    </div>
-                    <div class="benefit swiper-slide">
-                        <img alt="image" src="./img/wheat.png" class="benefit-img">
-                        <span class="benefit-title">Happy clients</span>
-                        <span class="benefit-description">
-                   Lorem ipsum dolor sit amet, consectetur.
-                     </span>
-                    </div>
-                    <div class="benefit swiper-slide">
-                        <img alt="image" src="./img/truck.png" class="benefit-img">
-                        <span class="benefit-title">Happy clients</span>
-                        <span class="benefit-description">
-                    Lorem ipsum dolor sit amet, consectetur.
-                     </span>
-                    </div>
-                    <div class="benefit swiper-slide">
-                        <img alt="image" src="./img/factory.png" class="benefit-img">
-                        <span class="benefit-title">Happy clients</span>
-                        <span class="benefit-description">
-                     Lorem ipsum dolor sit amet, consectetur.
-                     </span>
-                    </div>
-                    <div class="benefit swiper-slide">
-                        <img alt="image" src="./img/containers.png" class="benefit-img">
-                        <span class="benefit-title">Happy clients</span>
-                        <span class="benefit-description">
-                    Lorem ipsum dolor sit amet, consectetur.
-                     </span>
-                    </div>
-                </div>
-            </div>
+            <p class="about-us-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
         </div>
-        <div class="section_wrapper" id="clients">
-            <h1 class="title-image-section">Наші Партнери</h1>
-            <div class="clients-background swiper clients-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
-                    <div class="swiper-slide clients-block">
-                        <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
-                    </div>
+        <div class="swiper about-swiper">
+            <div class="about-company-container swiper-wrapper">
+                <div class="about-us-item swiper-slide">
+                    <img
+                            alt="image"
+                            src="./img/check.png"
+                            class="about_us_icon"
+                    />
+                    <span class="about_icon_description">Контроль Якості</span>
                 </div>
-            </div>
-        </div>
-        <div class="section_wrapper section_footer white-section">
-            <div class="footer_content">
-                <h3 class="footer_title">
-                    ЗВ'ЯЖІТЬСЯ З НАМИ
-                </h3>
-                <div class="footer_contacts">
-                    <div class="footer_contacts_item">
-                        <img src="./img/house.svg" alt="house" style="width: 20px; height: 20px">
-                        <p>Юридична адреса: <br/>
-                            04060, м. Київ,
-                            вул. Ризька, б. 73-Г, оф. 7/1
-                        </p>
-                    </div>
-                    <div class="footer_contacts_item">
-                        <img src="./img/house.svg" alt="house" style="width: 20px; height: 20px">
-                        <p>Поштова адреса: <br/>
-                            04080, м. Київ,
-                            вул. Новокостянтинівська,11
-                        </p>
-                    </div>
-                    <div>
-                        <div class="footer_contacts_item">
-                            <img src="./img/telephoneGreen.svg" alt="telephone">
-                            <p>Тел. +38(066)017-98-70 </p>
-                        </div>
-                        <div class="footer_contacts_item">
-                            <img src="./img/envelope.svg" alt="house" style="width: 20px; height: 20px">
-                            <p>e-mail: mho@timhlib.com</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="footer_contacts_item">
-                            <img src="./img/telephoneGreen.svg" alt="telephone">
-                            <p>Тел. +38(050)411-66-10 </p>
-                        </div>
-                        <div class="footer_contacts_item">
-                            <img src="./img/envelope.svg" alt="house" style="width: 20px; height: 20px">
-                            <p>e-mail: ovm@timhlib.com</p>
-                        </div>
-                    </div>
+                <div class="about-us-item swiper-slide">
+                    <img
+                            alt="image"
+                            src="./img/wheat.png"
+                            class="about_us_icon"
+                    />
+                    <span class="about_icon_description about-us-text02">Чистий продукт</span>
                 </div>
-                <div class="footer_license">ТОВ "ТІМХЛІБ"</div>
+                <div class="about-us-item swiper-slide">
+                    <img
+                            alt="image"
+                            src="./img/gears.png"
+                            class="about_us_icon"
+                    />
+                    <span class="about_icon_description about-us-text03">Сучасні технології</span>
+                </div>
+                <div class="about-us-item swiper-slide">
+                    <img
+                            alt="image"
+                            src="./img/truck.png"
+                            class="about_us_icon"
+                    />
+                    <span class="about_icon_description">Доставка продукцiї</span>
+                </div>
+                <div class="about-us-item swiper-slide">
+                    <img
+                            alt="image"
+                            src="./img/bag.png"
+                            class="about_us_icon"
+                    />
+                    <span class="about_icon_description">Роздрібні продажі</span>
+                </div>
+                <div class="about-us-item swiper-slide">
+                    <img
+                            alt="image"
+                            src="./img/factory.png"
+                            class="about_us_icon"
+                    />
+                    <span class="about_icon_description">Виробництво продукiї</span>
+                </div>
+                <div class="about-us-item swiper-slide">
+                    <img
+                            alt="image"
+                            src="./img/containers.png"
+                            class="about_us_icon"
+                    />
+                    <span class="about_icon_description">Логiстичнi центри</span>
+                </div>
+                <div class="about-us-item swiper-slide">
+                    <img
+                            alt="image"
+                            src="./img/loader.png"
+                            class="about_us_icon"
+                    />
+                    <span class="about_icon_description">Оптовi продажi</span>
+                </div>
             </div>
         </div>
     </div>
-    <script src="./scripts/dropdown/dropdown.js"></script>
-    <script src="scripts/bootstrap/bootstrap.min.js"></script>
-    <script src="scripts/swiper/swiper.min.js"></script>
-    <script src="index.js"></script>
+    <div class="section_wrapper" id="products">
+        <h1 class="title-image-section">Наші Продукти</h1>
+        <div class="products-wrapper">
+            <a class="product" href="pages/catalog/catalog.html?filters=bakery">
+                <img alt="milk" src="img/bread.svg" class="product-image" draggable="false">
+                <span class="product_description">
+                        хлібобулочна
+                        промисловість
+                    </span>
+                <div class="product-separator"></div>
+            </a>
+            <a class="product" href="pages/catalog/catalog.html?filters=confectionery">
+                <img alt="cake" src="img/cake.svg" class="product-image">
+                <span class="product_description">
+                        кондитерська
+                        промисловість
+                    </span>
+                <div class="product-separator"></div>
+            </a>
+            <a class="product" href="pages/catalog/catalog.html?filters=meat">
+                <img alt="meat" src="img/meat.svg" class="product-image" draggable="false">
+                <span class="product_description">
+                        м’ясна
+                        промисловість
+                    </span>
+                <div class="product-separator"></div>
+            </a>
+        </div>
+    </div>
+    <div class="section_wrapper white-section" id="benefits">
+        <h1 class="title-black-section">Наші Переваги</h1>
+        <div class="separator" id="benefits-separator">
+            <div class="left_separator"></div>
+            <img src="./img/separator_icon.svg" alt="wheat">
+            <div class="right_separator"></div>
+        </div>
+        <div class="benefit-wrapper swiper benefits-swiper">
+            <div class="swiper-wrapper">
+                <div class="benefit swiper-slide">
+                    <img alt="image" src="./img/bag.png" class="benefit-img">
+                    <span class="benefit-title">Happy clients</span>
+                    <span class="benefit-description">
+                     Lorem ipsum dolor sit amet, consectetur.
+                     </span>
+                </div>
+                <div class="benefit swiper-slide">
+                    <img alt="image" src="./img/wheat.png" class="benefit-img">
+                    <span class="benefit-title">Happy clients</span>
+                    <span class="benefit-description">
+                   Lorem ipsum dolor sit amet, consectetur.
+                     </span>
+                </div>
+                <div class="benefit swiper-slide">
+                    <img alt="image" src="./img/truck.png" class="benefit-img">
+                    <span class="benefit-title">Happy clients</span>
+                    <span class="benefit-description">
+                    Lorem ipsum dolor sit amet, consectetur.
+                     </span>
+                </div>
+                <div class="benefit swiper-slide">
+                    <img alt="image" src="./img/factory.png" class="benefit-img">
+                    <span class="benefit-title">Happy clients</span>
+                    <span class="benefit-description">
+                     Lorem ipsum dolor sit amet, consectetur.
+                     </span>
+                </div>
+                <div class="benefit swiper-slide">
+                    <img alt="image" src="./img/containers.png" class="benefit-img">
+                    <span class="benefit-title">Happy clients</span>
+                    <span class="benefit-description">
+                    Lorem ipsum dolor sit amet, consectetur.
+                     </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section_wrapper" id="clients">
+        <h1 class="title-image-section">Наші Партнери</h1>
+        <div class="clients-background swiper clients-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+                <div class="swiper-slide clients-block">
+                    <img class="clients-img" alt="roshen" src="./img/companies/roshen.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section_wrapper section_footer white-section">
+        <div class="footer_content">
+            <h3 class="footer_title">
+                ЗВ'ЯЖІТЬСЯ З НАМИ
+            </h3>
+            <div class="footer_contacts">
+                <div class="footer_contacts_item">
+                    <img src="./img/house.svg" alt="house" style="width: 20px; height: 20px">
+                    <p>Юридична адреса: <br/>
+                        04060, м. Київ,
+                        вул. Ризька, б. 73-Г, оф. 7/1
+                    </p>
+                </div>
+                <div class="footer_contacts_item">
+                    <img src="./img/house.svg" alt="house" style="width: 20px; height: 20px">
+                    <p>Поштова адреса: <br/>
+                        04080, м. Київ,
+                        вул. Новокостянтинівська,11
+                    </p>
+                </div>
+                <div>
+                    <div class="footer_contacts_item">
+                        <img src="./img/telephoneGreen.svg" alt="telephone">
+                        <p>Тел. +38(066)017-98-70 </p>
+                    </div>
+                    <div class="footer_contacts_item">
+                        <img src="./img/envelope.svg" alt="house" style="width: 20px; height: 20px">
+                        <p>e-mail: mho@timhlib.com</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="footer_contacts_item">
+                        <img src="./img/telephoneGreen.svg" alt="telephone">
+                        <p>Тел. +38(050)411-66-10 </p>
+                    </div>
+                    <div class="footer_contacts_item">
+                        <img src="./img/envelope.svg" alt="house" style="width: 20px; height: 20px">
+                        <p>e-mail: ovm@timhlib.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_license">ТОВ "ТІМХЛІБ"</div>
+        </div>
+    </div>
+</div>
+<script src="./scripts/dropdown/dropdown.js"></script>
+<script src="scripts/bootstrap/bootstrap.min.js"></script>
+<script src="scripts/swiper/swiper.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
