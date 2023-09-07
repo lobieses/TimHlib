@@ -47,28 +47,28 @@ button {
 }
 
 .logo {
-    width: 250px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     position: absolute;
-    top: -63px;
-    left: -80px;
+    top: -37px;
+    left: -50px;
 }
 
 .logo-separator {
     position: absolute;
-    height: 80%;
+    height: 65%;
     right: 205px;
-    bottom: calc(100px - 90%);
+    bottom: calc(105px - 90%);
     width: 1px;
     background: black;
 }
 
 .logo-company {
-    width: 250px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     position: absolute;
-    top: -80px;
-    right: -25px;
+    top: -50px;
+    right: 16px;
 }
 
 .contacts-header {
@@ -233,7 +233,7 @@ button {
 #products-filtered-list-dropdown {
     position: absolute;
     z-index: 999;
-    height: 100vh;
+    height: 147vh;
     width: 700px;
     left: -1000px;
     background: #fff;
@@ -310,6 +310,7 @@ button {
     overflow: hidden;
     user-select: none;
     transition: 0.3s;
+    box-shadow: 3px 3px 15px #757575;
 }
 
 .dropdown-product-concentrator:hover .dropdown-product-container {
@@ -384,6 +385,7 @@ button {
     width: 90%;
     height: 80vh;
     margin: 0 auto;
+    margin-bottom: 50px;
     border-radius: 20px;
     border: 1px solid #7e7e7e;
     padding: 35px 0;
@@ -401,6 +403,7 @@ button {
     border: 1px solid #525252;
     box-shadow: 3px 3px 15px #757575;
     transition: 0.2s all;
+    background-color: #efefef;
 }
 
 .product-image {
@@ -483,17 +486,20 @@ button {
     left: -1000px;
     position: fixed;
     overflow: hidden;
+    background-color: #efefef;
 }
 
 .modal-image {
     width: 100%;
     height: 200px;
+    object-fit: cover;
+    box-shadow: 1px 1px 7px #757575;
 }
 
 #contacts-dropdown {
     position: absolute;
     z-index: 999;
-    height: 300px;
+    height: 200px;
     width: 100vw;
     top: -1000px;
     background: #fff;
@@ -505,11 +511,11 @@ button {
 }
 
 #dropdown-contact-close {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     right: 15px;
-    bottom: 15px;
+    top: 15px;
     cursor: pointer;
 }
 
@@ -539,7 +545,7 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .contacts-dropdown-container img {
@@ -711,7 +717,96 @@ button {
 
 }
 
+.title-black-section {
+    font-family: Pacifico;
+    font-style: normal;
+    text-align: center;
+    color: #f4a261;
+    text-shadow: 0 -1px 5px rgba(244, 162, 97, 0.6);
+    font-size: 70px;
+    font-weight: 400;
+}
 
+.separator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.left_separator, .right_separator {
+    width: 100%;
+    height: 1px;
+    background-color: #2d2d2d;
+    transition: width 3s;
+    transition-timing-function: ease;
+}
+
+.separator img {
+    width: 30px;
+    height: 30px;
+}
+
+.body-block-catalog-sect {
+    margin-right: 95px;
+    margin-left: 95px;
+    margin-top: 58px;
+    margin-bottom: 58px;
+}
+
+.body-block-catalog-sect-1 {
+    margin-bottom: 58px;
+}
+
+.modal-name {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px #757575;
+}
+
+.modal-about {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.modal-description-2 {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.modal-description-strip-1 {
+    width: 90%;
+    height: 1px;
+    background: #525252;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px #757575;
+}
+
+.modal-description-2-h4 {
+    text-shadow: 1px 1px 2px #757575;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.benefits {
+    text-align: center;
+}
+
+.benefits li {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    text-shadow: 1px 1px 1px #757575;
+    font-size: 20px;
+}
 
 
 

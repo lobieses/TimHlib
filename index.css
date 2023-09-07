@@ -301,28 +301,28 @@ button {
 }
 
 .logo {
-    width: 250px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     position: absolute;
-    top: -63px;
-    left: -80px;
+    top: -37px;
+    left: -50px;
 }
 
 .logo-separator {
     position: absolute;
-    height: 80%;
+    height: 65%;
     right: 205px;
-    bottom: calc(100px - 90%);
+    bottom: calc(105px - 90%);
     width: 1px;
     background: black;
 }
 
 .logo-company {
-    width: 250px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     position: absolute;
-    top: -80px;
-    right: -25px;
+    top: -50px;
+    right: 16px;
 }
 
 .home-items {
