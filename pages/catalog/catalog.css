@@ -233,7 +233,7 @@ button {
 #products-filtered-list-dropdown {
     position: absolute;
     z-index: 999;
-    height: 147vh;
+    height: 100vh;
     width: 700px;
     left: -1000px;
     background: #fff;
@@ -383,9 +383,8 @@ button {
 
 #products {
     width: 90%;
-    height: 80vh;
+    height: 73vh;
     margin: 0 auto;
-    margin-bottom: 50px;
     border-radius: 20px;
     border: 1px solid #7e7e7e;
     padding: 35px 0;
@@ -394,6 +393,8 @@ button {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
+    overflow-y: scroll;
+    overflow: hidden;
 }
 
 .product-wrapper {
@@ -514,7 +515,7 @@ button {
     width: 30px;
     height: 30px;
     position: absolute;
-    right: 15px;
+    right: 25px;
     top: 15px;
     cursor: pointer;
 }
@@ -808,6 +809,47 @@ button {
     font-size: 20px;
 }
 
+.is-available.positive{
+    width: 150px;
+    height: 35px;
+    margin-left: 730px;
+    margin-top: -4px;
+    box-shadow: 2px 2px 10px #757575;
+    position: absolute;
+    background: url(img/positive.png);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+}
+
+.is-available.negative{
+    width: 150px;
+    height: 35px;
+    margin-left: 730px;
+    margin-top: -4px;
+    box-shadow: 2px 2px 10px #757575;
+    position: absolute;
+    background: url(img/negative.png);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+}
+
+.is-available-text-1 {
+    display: inline-block;
+    width: 37px;
+    height: 100%;
+    position: absolute;
+}
+
+.is-available-text-2 {
+    display: inline-block;
+    margin-left: 35px;
+    background: #efefef;
+    height: 27px;
+    width: 104px;
+    padding-top: 8px;
+    padding-left: 11px;
+    font-family: Rubik;
+}
 
 
 
