@@ -821,6 +821,22 @@ button {
     background-size: 35px 35px;
 }
 
+.is-available.positive::after {
+    content: 'В наявності';
+    font-family: Rubik;
+    position: absolute;
+    margin-top: -31px;
+    margin-left: 44px;
+}
+
+.is-available.negative::after {
+    content: 'У відсутності';
+    font-family: Rubik;
+    position: absolute;
+    margin-top: -31px;
+    margin-left: 40px;
+}
+
 .is-available.negative{
     width: 150px;
     height: 35px;
