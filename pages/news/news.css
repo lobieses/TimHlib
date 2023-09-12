@@ -185,7 +185,6 @@ button {
     width: 380px;
     height: 380px;
     border-radius: 20px;
-    margin-left: 30px;
     margin-right: 20px;
     float: right;
     border: solid 1px #525252;
@@ -507,10 +506,21 @@ button {
     font-weight: 400;
 }
 
+
+@media (max-width: 2560px) {
+    .body-block-news-sect-2-b2-2 {
+        width: calc(99% - 450px);
+    }
+}
+
 @media (max-width: 1658px) {
-    .body-block-news-sect-2-b2, .body-block-news-sect-2-b2-2 {
+    .body-block-news-sect-2-b2 {
         width: 57%;
     }
+
+    .body-block-news-sect-2-b2-2 {
+        width: calc(99% - 450px);
+}
 
     .news-about-button, .news-about-button-2 {
         margin-top: 15px;
@@ -541,6 +551,10 @@ button {
         width: 280px;
         height: 280px;
     }
+
+    .body-block-news-sect-2-b2-2 {
+        width: calc(98% - 345px);
+}
 
     .body-block-news-sect-2-b2-h4 {
         font-size: 25px;
@@ -586,6 +600,10 @@ button {
         height: 163px;
         width: 60%;
     }
+
+    .body-block-news-sect-2-b2-2 {
+        width: calc(102% - 280px);
+}
 
     .news-about-button, .news-about-button-2 {
         margin-top: 15px;
@@ -634,6 +652,10 @@ button {
         height: 113px;
         width: 60%;
     }
+
+    .body-block-news-sect-2-b2-2 {
+        width: calc(99% - 210px);
+}
 
     .news-about-button, .news-about-button-2 {
         margin-top: 12px;
@@ -768,6 +790,10 @@ button {
 
     .body-block-news {
         margin: 30px 70px;
+    }
+
+    .body-block-news-sect-2-b1-2 {
+        margin-top: 180px;
     }
 
 }
