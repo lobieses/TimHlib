@@ -775,6 +775,17 @@ button {
     margin-bottom: 15px;
 }
 
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
+.product-modal-template {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .modal-description-2 {
     margin-left: 50px;
     margin-right: 50px;
