@@ -665,7 +665,7 @@ button {
 
 @media (max-width: 800px) {
     #contacts-dropdown {
-        height: 500px;
+        height: 300px;
     }
 
     .contacts-dropdown-container {
@@ -708,7 +708,7 @@ button {
 
 @media (max-width: 470px) {
     #contacts-dropdown {
-        height: 700px;
+        height: 500px;
     }
 
     .contacts-dropdown-container {
@@ -1007,6 +1007,10 @@ button {
         padding: 0 10px;
     }
 
+    .product-image:hover {
+        height: 160px;
+    }
+
     #search {
 
     }
@@ -1253,9 +1257,14 @@ button {
 }
 
 @media (max-width: 594px) {
+
     .filter-settings {
         display: table;
         margin-top: 20px;
+    }
+
+    .dropdown-product-concentrator:hover .dropdown-product-container:hover {
+        padding: 0 50px;
     }
 
     .filter {
